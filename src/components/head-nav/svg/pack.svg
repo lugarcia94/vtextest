@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="20px" viewBox="0 0 18 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="topo-waw" transform="translate(-1112.000000, -32.000000)" fill="#FF7000">
+            <g id="pedidos">
+                <g transform="translate(1112.000000, 32.000000)">
+                    <g id="box-(38)">
+                        <g id="Shape">
+                            <polygon fill-rule="nonzero" points="10.6471698 10.1576763 9.73018868 10.6763485 9.73018868 20 17.9872642 15.340249 17.9872642 6.01659751"></polygon>
+                            <polygon fill-rule="nonzero" points="12.1415094 1.7966805 8.96603774 0 0.479716981 4.78838174 3.65943396 6.58506224"></polygon>
+                            <polygon fill-rule="nonzero" points="17.4481132 4.78838174 13.7886792 2.75103734 5.30660377 7.53941909 5.79056604 7.78423237 8.96603774 9.57676349 12.1245283 7.7966805"></polygon>
+                            <polygon fill-rule="nonzero" points="4.66556604 10.966805 3.14575472 10.2033195 3.14575472 7.82987552 0.0127358491 6.06639004 0.0127358491 15.3236515 8.21037736 19.9502075 8.21037736 10.6929461 4.66556604 8.69709544"></polygon>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

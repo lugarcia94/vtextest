@@ -1,0 +1,63 @@
+.account
+    &__loggin
+        padding-bottom: 17px
+        a
+            display: block
+            background: color[0]
+            border-radius: 7px
+            text-align: center
+            padding: 0 18px
+            transition: all .3s
+            border 1px solid transparent
+            font-size: 12px
+            color: #ffffff
+            font-weight: 500
+            white-space: nowrap
+            line-height: 38px
+            &:hover
+                background: #ffffff
+                border-color: color[0]
+                text-decoration: none
+                color: color[0]
+    &__register
+        span
+            display: block
+            font-size: 12px
+            line-height: 14px
+            color: #8B8A8A
+            text-align: center
+            margin-bottom: 2px
+        a
+            display: block
+            font-size: 16px
+            color: color[0]
+            text-align: center
+            line-height: 19px
+            text-decoration: underline
+            transition: .3s all
+            margin-bottom: 14px
+            &:hover
+                color: #8B8A8A
+    &__links
+        border-top: 1px solid #EDEDED
+        padding-top: 3px
+        .logout & 
+            padding-top: 0 
+            border-top: 0
+
+    &__link
+        text-align: center
+        a
+            font-size: 14px
+            color: #fff
+            line-height: 30px
+            &:hover
+                color: color[2]
+                text-decoration: none
+
+    &__loggin, &__register 
+        display: none 
+
+        .login &
+            display: block
+        

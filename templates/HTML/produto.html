@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common" xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce">
+    
+    <head>
+        <vtex:template id="00-likecosmeticos-head" />
+    </head>
+    <body id="product-page">
+        <div class="wrapper">
+            <vtex:template id="00-likecosmeticos-menu" />
+
+            <div class="wrapper__container">
+                <vtex:template id="00-likecosmeticos-header" />
+
+                <div class="product__breadcrumb">
+                    <div class="breadcrumb">
+                        <vtex.cmc:breadCrumb />
+                        <div class="share__social">
+                            <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5cb73c753d8ab754"></script>
+                            <div class="addthis_inline_share_toolbox"></div>
+                        </div>
+                    </div>
+                </div>
+            
+                <main class="main" id="main">
+                    <div class="product__container">
+                        <div id="produto" class="product__image">
+                            <vtex.cmc:ProductImage zoom="on"/>
+                            <div class="labels product__labels">
+                                <div class="labels-colection" role="group">
+                                    <span class="labels-discount">
+                                        <vtex.cmc:discountHightLight/>
+                                    </span>
+                                    <span class="labels-featured">
+                                        <vtex.cmc:HightLight/>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="product__info">
+                            <h1 class="product__name"><vtex.cmc:productName /></h1>
+
+                            <div class="product__sku-review">
+                                <div class="review review--short">
+                                    <vtex.cmc:evaluationRate/><span class="review__star"></span>
+                                </div>                            
+                                <span class="product__code"><vtex.cmc:skuReference/></span>
+                                <vtex.cmc:brandName/>
+                            </div>
+
+                            <div class="product__prices">
+
+                                <div class="product__description product__description--short">
+                                    <span class="description-title">Diferenciais do produto</span>
+                                    <div class="description-short"><vtex.cmc:productDescriptionShort /></div>
+                                </div>
+                                
+                                <div class="product__attrs product__attrs--dimensoes" data-attr="Dimensões"></div>
+                                <div class="product__attrs product__attrs--outras-informacoes" data-attr="Outras informações"></div>
+                                <div class="product__actions" data-component="wholesale-actions">
+                                    <a href="#selecioneasvariacoes" class="product__variants">CLIQUE E SELECIONE AS CORES</a>
+                                </div>
+                                <!--  Component: Sales channels -->
+                                <vtex.cmc:SalesChannelDropList />
+                            
+                                <!--  Component: Addicional services -->
+                                <vtex.cmc:stockKeepingUnitService />
+                                
+                                <div class="product__variations-single">
+                                    <vtex.cmc:stockKeepingUnitSelection />
+                                </div>
+          
+                            </div>
+
+                        </div>
+                        <div class="product__right--colunm">
+                            <!--  Component: Sellers -->
+                            <vtex.cmc:SellerOptions />
+                    
+                            <div class="product__price" data-component="wholesale-prices"></div>
+                            <div class="product__price"><vtex.cmc:skuPrice/></div>
+                            
+                           <div class="product__other-payment">
+                                <span class="product__btn-other-payment">Ver opções de parcelamento</span>
+                                <vtex.cmc:OtherPaymentMethod/>
+                            </div>
+                            
+                            <div class="product__flags">
+                                <span class="product__flags-title">Formas de pagamento</span>
+                                <img src="data:image/png;base64,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"/>
+                            </div>
+                            
+                            <div class="product__actions" data-component="wholesale-actions">
+                                <button disabled="disabled" type="button" class="product__buy">COMPRAR</button>
+                            </div>
+                                    
+                            <div class="product__actions product__actions--button">
+                                <div class="product__buy-qtds">
+                                    <div class="product__qtds">
+                                        <div class="qtds">
+                                            <button class="qtds__button qtds__button--less" type="button"> - </button>
+                                            <input type="number" class="qtds__input" />
+                                            <button class="qtds__button qtds__button--more" type="button"> + </button>
+                                        </div>
+                                    </div>
+                                    <vtex.cmc:BuyButton />
+                                </div>
+                            </div>
+                                    
+                            <div class="product__shipping">
+                                <vtex.cmc:shippingValue />
+                                <script type="text/javascript">
+                                    $(document).ready( function(){
+                                        ShippingValue();
+                                    });
+                                </script>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product__variations" data-component="wholesale"></div>
+                    
+                    <div class="buytobether product__buytobether">
+                        <vtex.cmc:BuyTogether/>
+                    </div>
+                    
+                    <div class="product__extra-info">
+                        <ul class="item__extra">
+                            <li class="categorias">
+                                <span>Categorias</span>
+                            </li>
+                            <li class="tipo">
+                                <span>Tipos de cabelo</span>
+                                <ul></ul>
+                            </li>
+                            <li class="linha">
+                                <span>Linha</span>
+                                <ul></ul>
+                            </li>
+                            <li class="marca">
+                                <span>Marca</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="product__description product__description--box description-product">
+                        <h2 class="product__title product__title--description">Descrição</h2>
+                        <div class="description-product__content">
+                            <vtex.cmc:ProductDescription/>
+                        </div>
+                    </div>
+                    
+                    <div class="product__specification-image">
+                        <div class="product__specification" data-attr="Especificações Técnicas"></div>
+                    </div>
+                    
+                    <div class="product__review--box">
+                        <div class="review product__review">
+                            <h2 class="product__title">avaliações do produto</h2>
+                            <vtex.cmc:UserReview/>
+                        </div>
+                    </div>
+                    
+                    <div class="showcase">
+                        <div data-carousel="showcase" class="showcase__container">
+                            <vtex:contentPlaceHolder id="related" />
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="news-rulers">
+                        <div class="news-rulers__item news">
+                            <vtex.cmc:newsletterOptIn/>
+                        </div>
+                    </div>
+                    
+                </main>
+                
+            </div>
+            
+            <vtex:template id="00-likecosmeticos-footer" />
+            <vtex:template id="00-likecosmeticos-scripts" />
+            <vtex.cmc:productQuickView/>
+            <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5c3e05e02fc28ae3"></script>
+        </div>
+        
+    </body>
+</html>

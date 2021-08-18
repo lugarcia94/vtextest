@@ -1,0 +1,554 @@
+
+.menu
+    [slot]
+        display                 : none 
+
+    .head-nav
+        flex-wrap               : wrap
+        padding                 : 15px 
+    .head-nav__sub
+        display                 : none !important 
+    .head-nav__item--lv1
+        flex                    : 0 0 100% 
+        margin-right            : 0
+    .social__list
+        justify-content         : space-around
+        max-width               : none  
+        border-top              : solid 1px #ffb200
+        padding-top             : 20px 
+        margin-top              : 20px
+    .menu-banner-link
+        display                 : none
+
+    &--mobile
+        position                : fixed
+        top                     : 0
+        left                    : 0
+        z-index                 : 100
+
+        width                   : 100%
+        height                  : 100%
+
+        background              : rgba(0, 0, 0, .5)
+
+        transition              : transition[0]
+
+        opacity                 : 0
+        visibility              : hidden
+
+
+        .menu
+            &__container
+                height          : 100%
+                max-width       : 290px
+                background      : #fff
+                border-top-right-radius: 7px
+                transition      : transition[0]
+                transform       : translate3d(-256px, 0, 0)
+
+                .is-menu &
+                    transform   : translate3d(0,0,0)
+
+            &__nav
+                height          : 100%
+                overflow-y      : auto
+                padding-bottom  : 50px
+
+        .is-menu &
+            opacity             : 1
+            visibility          : visible
+
+
+    &--hide
+        opacity         : 0
+        visibility      : hidden
+
+    &__header
+        padding         : 38px 15px
+        display         : flex
+        flex-flow       : wrap
+        width           : 100%
+        background      : color[0]
+
+    &__close
+        font-size           : 0
+        display             : flex
+        justify-content     : center
+        align-items         : center
+        width               : 30px
+        height              : 30px
+        border              : 0
+        background          : #e6e6e6
+        border-radius       : 50%
+        position            : absolute
+        top                 : 10px
+        right               : 10px
+        &:before
+            font-icon       : url('./svg/close.svg')
+            font-size       : 12px
+            color           : color[2]
+
+    &__title
+        flex            : 1 1 auto
+        display         : flex
+        justify-content : flex-start
+        align-items     : center
+
+        max-width       : calc(100% - 40px)
+        height          : 40px
+        padding-left    : 15px
+
+        font-size       : 14px
+        font-weight     : semi-bold
+
+        text-transform  : uppercase
+
+        color           : #fff
+
+    &__categories
+        &:not(.menu__categories--nv0)
+            background  : rgba(0,0,0,.03)
+        
+        &--nv0
+            > li.menu__item--has-child
+                height: 55px
+                @media(min-width : 992px)
+                    &:after
+                        content: ''
+                        display: block
+                        position: relative
+                        width: 26px
+                        height: 26px
+                        background: #fff
+                        top: -10px
+                        left: 50%
+                        -webkit-transform: translateX(-50%) rotate(45deg)
+                        transform: translateX(-50%) rotate(45deg)
+                        -webkit-box-shadow: 0 0 5px 0 rgba(0,0,0,0.2)
+                        box-shadow: 0 0 5px 0 rgba(0,0,0,0.2)
+                        border-radius: 7px
+                        opacity: 0
+                        visibility: hidden
+                    &:hover
+                        &:after
+                            opacity: 1
+                            visibility: visible
+                            animation-name: opacityframe
+                            animation-duration: 1s
+
+    &__link
+        &--nv0, &--nv1, &--nv2
+            display                : block
+            text-align             : left
+
+            &:hover
+                text-decoration    : none
+
+        &--nv0
+            font-size              : 15px
+            font-weight            : 500
+            color                  : #FFFFFF
+
+        &--nv2
+            font-size              : 13px
+            color                  : #453F3F
+            line-height            : 27px!important  
+
+        &--nv1
+            color                  : color[0]
+            font-size              : 15px
+            line-height            : 18px!important
+            font-weight            : 500
+            margin-bottom          : 11px 
+
+    &__user
+        flex                                : 1 1 100%
+        background                          : #fff
+        border-bottom                       : solid 2px color[0]
+
+        &-list
+            display                         : flex
+
+            &-item
+                flex                        : 0 0 25%
+
+            &-link
+                font-size                   : 0
+                display                     : flex
+                justify-content             : center
+                align-items                 : center
+                padding                     : 10px
+                color                       : color[1]
+
+                &:before
+                    font-size               : 25px
+
+                &--user
+                    &:before
+                        font-icon           : url('./svg/user.svg')
+
+                &--orders
+                    &:before
+                        font-icon           : url('./svg/order.svg')
+
+                &--mail
+                    &:before
+                        font-icon           : url('./svg/mail.svg')
+
+                &--help
+                    &:before
+                        font-icon           : url('./svg/help.svg')
+    
+@media only screen and (min-width: 992px)
+    .menu__container
+        { container }
+
+    .menu
+        position                            : fixed
+        top                                 : 95px
+        z-index                             : -1
+
+        display                             : block
+        width                               : 100%
+
+        overflow                            : visible
+
+        transition                          : transition[0]
+
+        background-color                    : #000
+
+        .scrolling--top & 
+            box-shadow                      : 0 10px 10px rgba(0,0,0,.01)
+        .scrolling:not(.scrolling--top) &
+            transform                       : translate3d(0, -90px, 0)
+
+        &__nav
+            position                        : relative
+
+        &--hide
+            opacity                         : 1
+            visibility                      : visible
+
+        &__categories
+            display                         : flex
+            justify-content                 : space-between
+            overflow                        : visible
+            max-width                       : 100%
+            margin                          : 0 auto
+            
+            .menu__link--nv1, .menu__link--nv2
+                line-height                 : 1.3
+                text-align                  : left
+
+            &:not(.menu__categories--nv0)
+                background                  : #fff
+
+            &--nv1
+                position                    : absolute
+                display                     : flex 
+                padding                     : 30px 40px
+                border-radius               : 7px
+                white-space                 : nowrap
+                font-size                   : 0
+                background                  : #fff
+                visibility                  : hidden
+                opacity                     : 0    
+
+                .banner
+                    margin: -30px -40px
+
+                > .menu__sub-inner
+                    display                     : inline-block
+                    white-space                 : normal
+                    overflow-y                  : auto 
+                    .banner
+                        display                 : none
+
+                    > .menu__list
+                        column-count            : 2
+                        width                   : 340px
+
+                        > .menu__item
+                            break-inside: avoid
+
+
+            &-all
+                height: 55px
+                order: 1
+                &:after
+                    content: ''
+                    display: block
+                    position: relative
+                    width: 26px
+                    height: 26px
+                    background: #fff
+                    top: -10px
+                    left: 50%
+                    -webkit-transform: translateX(-50%) rotate(45deg)
+                    transform: translateX(-50%) rotate(45deg)
+                    -webkit-box-shadow: 0 0 5px 0 rgba(0,0,0,0.2)
+                    box-shadow: 0 0 5px 0 rgba(0,0,0,0.2)
+                    border-radius: 7px
+                    opacity: 0
+                    visibility: hidden
+                &:hover
+                    &:after
+                        opacity: 1
+                        visibility: visible
+                        animation-name: opacityframe
+                        animation-duration: 1s
+
+
+
+                &--nv0
+                    display: flex
+                    flex-wrap: wrap
+                    align-items: flex-start
+                    justify-content: space-between
+
+                    > li
+                        display: block 
+                        break-inside: avoid
+                        max-height: 300px
+                        overflow: auto
+
+                .menu__item--has-child
+                    &:not(.menu__item--nv0)
+                        margin: 10px 0 0 0
+
+                &--nv2
+                    margin: 0 0 10px 0
+                    display: block
+
+                &__name
+                    position                : relative
+                    cursor                  : pointer
+
+                &--inner
+                    position                : absolute
+                    right                   : 0
+                    width                   : 100%
+                    max-height              : 410px
+                    border-radius           : 7px
+                    padding                 : 30px 40px
+                    transition              : transition[0]
+                    background              : #fff
+                    visibility              : hidden
+                    opacity                 : 0
+                    overflow-y              : auto
+                .menu__link--nv0
+                    color: color[0]
+                    &:hover
+                        color: color[2]
+                .menu__item--nv0
+                    break-inside            : avoid
+
+                    > a:before
+                        display             : none
+
+                .menu__link--nv0 
+                    font-weight             : semi-bold
+
+
+                .menu & .menu__link--nv0
+                    justify-content         : flex-start
+                    height                  : auto
+
+                &:hover
+                    .menu__categories-all__name:after
+                        max-width           : 100%
+
+
+                    .menu__categories-all--inner
+                        visibility          : visible
+                        opacity             : 1
+                        z-index             : 9
+
+        &__item
+            &--nv0
+
+                > a
+                    position                    : relative
+
+                &:hover
+                    > a
+                        &:before
+                            max-width       : 100%
+
+                    .menu__categories--nv1
+                        visibility          : visible
+                        opacity             : 1
+                        z-index             : 9
+
+        .menu__link--nv0
+            display                         : flex
+            justify-content                 : center
+            align-items                     : center
+            height                          : 55px
+ 
+
+        &__link
+            &--nv0, &--nv1, &--nv2
+                padding                     : 0
+                transition                  : all .3s
+            &--nv1, &--nv2
+                border-bottom               : solid 1px transparent
+
+                &:hover
+                    color                   : color[2]
+
+        &__categories-all__name
+            display                         : flex
+            justify-content                 : center
+            align-items                     : center
+            height                          : 55px
+            padding                         : 0
+            font-size                       : 15px
+            font-weight                     : 500
+            color                           : #ffffff
+            order                           : 0
+
+            &:before
+                font-icon          : url('./svg/menu-todas.svg')
+                font-size          : 22.42px
+                margin-right       : 5px
+                color              : #ffffff
+
+        // Ajuste last
+        &__item--nv0
+            order                           : 1
+
+            &:nth-last-child(2), &:nth-last-child(3)
+                .banner
+                    margin-left             : 0
+                    margin-right            : 10px
+
+                .menu__categories--nv1
+                    direction               : rtl
+                    left                    : auto
+                    right                   : 0
+
+                    .menu__sub-inner
+                        direction           : ltr
+
+@media only screen and (min-width: 1250px)
+    .menu__categories--nv1 
+        > .menu__sub-inner 
+            > .menu__list
+                column-count: 3 
+
+.category__brands
+    padding-right: 25px
+    &--title
+        font-size: 14px
+        line-height: 17px
+        color: color[0]
+        font-weight: 500
+    &--list
+        column-count: 2
+        padding-top: 20px
+    &--item
+        break-inside: avoid
+        padding: 15px 5px
+        text-align: center
+
+@keyframes opacityframe 
+  from
+    opacity: 0
+  to
+    opacity: 1
+
+@media only screen and (max-width: 991px)
+    .menu
+        &__header
+            background: none
+        &__account
+            display: flex
+            align-items: center
+            &:before
+                content: ''
+                display: block
+                margin-right: 6px
+                font-icon: url('./svg/user.svg')
+                font-size: 30px
+                color: color[2]
+            a
+                color: color[1]
+            span 
+                &:first-child
+                    font-size: 13px
+                    line-height: 15px
+                    font-weight: 400
+                &:last-child
+                    font-size: 15px
+                    line-height: 18px
+                    font-weight: 300
+                    display: block
+
+        &__categories
+            background: none!important
+            &--nv1
+                display: none
+            &--nv2
+                padding-bottom 30px
+        &__link
+            &--nv0
+                color: color[0]
+                padding: 10px 15px
+                text-align: left 
+            &--nv1
+                font-size: 14px
+                font-weight: 500
+                color: color[1]
+                padding-left: 15px
+            &--nv2
+                font-size: 13px
+                line-height: 27px
+                color: color[1]
+                padding-left: 15px
+        &__item
+            height auto!important
+            &--nv0
+                border-top: 1px solid #EAEAEA
+                position relative
+                &:last-child
+                    border-bottom: 1px solid #EAEAEA
+                &.menu__item--has-child:after
+                    content: ''
+                    width: 45px
+                    height: 39px
+                    top: 0px
+                    right 0
+                    position: absolute
+                    font-icon: url('./svg/dropdown-cat.svg')
+                    font-size: 7px
+                    color: color[0]
+                    display: flex
+                    align-items: center
+                    justify-content: center
+                    transition: all .3s
+                    cursor pointer
+            &[aria-expanded=true]
+                .menu__categories--nv1
+                    display: block
+                &.menu__item--has-child:after
+                    color: color[2]
+                    transform: rotate(180deg)
+        .head-nav
+            height: auto
+            &__item
+                &--lv1
+                    &:before
+                        display: none
+            &__link
+                display: none!important
+            &__sub
+                display: block!important
+                position: static
+                transform: none
+                box-shadow: none
+                opacity 1
+                visibility: visible
+                padding: 0
+                &:before, &:after
+                    display: none

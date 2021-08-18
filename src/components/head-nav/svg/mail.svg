@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="12px" viewBox="0 0 16 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>email (23)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="home-wawcadeiras" transform="translate(-1243.000000, -164.000000)" fill="#FFB200">
+            <g id="hover-atendimento" transform="translate(1219.000000, 65.000000)">
+                <g id="txt" transform="translate(24.000000, 24.000000)">
+                    <g id="email" transform="translate(0.000000, 72.000000)">
+                        <g id="email-(23)" transform="translate(0.000000, 3.000000)">
+                            <g id="Shape">
+                                <path d="M14.59375,0 L1.40625,0 C0.6318125,0 0,0.621415385 0,1.38461538 L0,10.6153846 C0,11.376 0.629,12 1.40625,12 L14.59375,12 C15.36625,12 16,11.3806769 16,10.6153846 L16,1.38461538 C16,0.624 15.371,0 14.59375,0 Z M14.3995625,0.923076923 L8.0298125,7.19486154 L1.60496875,0.923076923 L14.3995625,0.923076923 Z M0.9375,10.4242462 L0.9375,1.57135385 L5.45246875,5.97873846 L0.9375,10.4242462 Z M1.60040625,11.0769231 L6.11821875,6.62861538 L7.70125,8.17390769 C7.8845,8.3528 8.18021875,8.35221538 8.36271875,8.17249231 L9.90625,6.65270769 L14.3995938,11.0769231 L1.60040625,11.0769231 Z M15.0625,10.4242154 L10.5691562,6 L15.0625,1.57575385 L15.0625,10.4242154 Z" fill-rule="nonzero"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

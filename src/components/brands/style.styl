@@ -1,0 +1,76 @@
+.brands
+    padding-top: 10px
+    padding-bottom: 47px
+
+
+
+    @media(max-width : 991px)
+        padding-top: 38px
+        padding-bottom: 38px
+    &__container
+        max-width: 1320px
+        width: 100%
+        padding: 0 15px
+        margin: 0 auto
+        @media(max-width : 991px)
+            padding: 0px
+    &__title
+        color: #453F3F
+        font-size: 35px
+        line-height: 42px
+        font-weight: 300
+        margin-bottom: 20px
+        @media (max-width: 991px)
+            padding: 0 15px
+        @media (max-width: 767px)
+            font-size: 30px
+            line-height: 36px
+            text-align: center
+            
+    &__list
+        display: flex 
+        background-color: #e6e6e6
+        padding: 15px 0
+        border-radius: 5px
+        overflow: hidden
+
+        @media(max-width : 991px)
+            display: flex
+            align-items: center
+            justify-content: space-between
+            overflow auto
+            padding: 15px
+
+    &__item
+        display: flex 
+        justify-content: center 
+        align-items: center 
+
+        flex: 0 0 auto
+        padding: 10px
+
+        @media(max-width : 991px)
+            min-width: 100px
+            margin-right: 45px
+        img 
+            display: block
+            margin: 0 auto
+    .slick-track
+        display: flex
+        align-items: center
+        justify-content: center
+    .slick-arrow
+        top: 50%
+        transform: translateY(-50%)
+    .slick-prev
+        left 0
+        background: none
+        padding: 0
+        z-index 1
+    .slick-next
+        right 0
+        background: none
+        padding: 0
+        z-index 1
+    .slick-list
+        padding: 0 20px

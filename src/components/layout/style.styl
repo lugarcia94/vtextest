@@ -1,0 +1,21 @@
+.layout
+    display         : flex
+    justify-content : space-between
+    align-items     : stretch
+
+    &__left
+        position    : absolute
+
+    &__main
+        flex        : 1
+        min-width   : 0
+
+
+@media (min-width: 992px)
+    .layout
+        &__left
+            flex         : 0 0 275px
+            position    : static
+            max-width   : 275px
+            padding     : 0 15px
+            margin-top  : 20px

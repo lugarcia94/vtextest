@@ -1,0 +1,103 @@
+#set($id = $product.Id)
+#set($uri = $product.Uri)
+#set($skuId = $product.productVariantId)
+#set($escapedName = $product.HtmlEscapedName)
+#set($evaluationRate = $product.EvaluationRate)
+#set($hasBestPrice = '')
+#set($inStock = 'showcase__item--out')
+
+#if ($product.IsInStock)
+    #set($inStock = '')
+#end
+
+#if ($product.HasBestPrice) 
+    #set($hasBestPrice = 'showcase__item--offer')
+#end
+
+<article class="showcase__item $inStock $hasBestPrice" data-sku="$skuId" produto="$id" itemscope itemtype="http://schema.org/SomeProducts">
+
+    <figure class="showcase__image" role="presentation" title="$escapedName" itemprop="image">
+        <a class="showcase__link showcase__link--image" href="$uri" itemprop="url">
+            $product.GetImageTag(240,240)
+        </a>
+
+        #if ($product.IsInStock)
+            <div class="showcase__labels">
+                #if ($product.DiscountHightLight != "" || $product.ListPriceMinusBestPriceInPercent >= 1)
+                <ul class="labels labels--showcase">
+                    #if ($product.DiscountHightLight != "")
+                    <li class="labels__item labels__item--discount">$product.DiscountHightLight</li>
+                    #end
+
+                    #if ($product.ListPriceMinusBestPriceInPercent >= 1)
+                    <li class="labels__item labels__item--percent">$product.ListPriceMinusBestPriceInPercent</li>
+                    #end
+                </ul>
+                #end
+    
+                #if ($product.HightLight != "")
+                <div class="labels labels--showcase labels--collection">$product.HightLight</div>
+                #end
+            </div>
+        #end
+    </figure>
+
+    <div class="showcase__main">
+
+        <div class="review showcase__review review--short">
+            <span class="rating-produto avaliacao$product.EvaluationRate"></span>
+            <span class="review__star review__star--small">$product.EvaluationRate</span>
+        </div>
+
+        <h1 class="showcase__name" itemprop="name">
+            <a class="showcase__link showcase__link--name" href="$uri" itemprop="url">
+                $product.Name
+            </a>
+        </h1>
+
+        #if ($product.IsInStock)
+        <div class="showcase__prices">
+            <div class="price" itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
+
+                #if ($product.HasBestPrice)
+                <div class="valor-de price__list-price">
+                    <strong>$product.ListPrice</strong>
+                </div>
+                #end
+
+                <div class="valor-por price__best-price" itemprop="price">
+                    <strong>$product.BestPrice</strong>
+                </div>
+
+                #if ($product.HasBestPrice)
+                <div class="save-price price__save">(Economia de $product.ListPriceMinusBestPrice)</div>
+                #end
+
+                <div class="installment price__installment">
+                    #if ($product.NumbersOfInstallment > 1)
+                        <strong>${product.NumbersOfInstallment}x</strong> de <strong>$product.InstallmentValue</strong>
+                    #end
+                </div>
+
+                <div class="price__in-cash"></div>
+
+                <link itemprop="availability" href="http://schema.org/InStock" />
+            </div>
+        </div>
+
+        #else
+        <span class="showcase__out">Produto Esgotado</span>
+        #end
+
+        #if ($product.IsInStock)
+        <div class="showcase__actions">
+            <div class="showcase__giftlist" data-id="$product.Id"></div>
+            <div class="showcase__buy" data-id="$product.Id"></div>
+            <div class="showcase__quickview"><a class="thickbox" alt="$product.Name" href="/quick-view/?idproduto=$id&KeepThis=true&TB_iframe=true" >Detalhes</a></div>
+            <div class="showcase__wishlist" data-id="$product.Id" data-component="wishlist-add"></div>
+        </div>
+        #end
+
+    </div>
+
+</article>

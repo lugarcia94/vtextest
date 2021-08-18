@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="26px" height="22px" viewBox="0 0 26 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>Clip 6</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="0 22 26 22 26 0 0 0"></polygon>
+    </defs>
+    <g id="rodape" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-1074.000000, -112.000000)">
+        <g transform="translate(-32.000000, -8.000000)" id="Group-18">
+            <g transform="translate(993.000000, 84.000000)">
+                <g id="Page-1" transform="translate(113.000000, 36.000000)">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <g id="Clip-6"></g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

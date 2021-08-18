@@ -1,0 +1,167 @@
+.select-fake
+    position                : relative
+    width                   : 100%
+    height                  : 40px
+
+    border                  : solid 1px #f0f0f0
+    border-radius           : 2px
+
+    &__value
+        display             : block
+
+        height              : 100%
+        width               : calc(100% - 45px)
+
+        padding             : 0 15px 0
+
+
+        overflow            : hidden
+        white-space         : nowrap
+        text-overflow       : ellipsis
+
+        font-size           : 14px
+        font-weight         : regular
+        line-height         : 40px
+
+        &:after
+            content         : ''
+
+            position        : absolute
+            right           : 10px
+            top             : 50%
+
+            width           : 0
+            height          : 0
+
+            margin-top      : -2px
+
+            border-top      : solid 5px #000
+            border-left     : solid 5px transparent
+            border-right    : solid 5px transparent
+
+            transform       : transformY(-50%)
+
+    select
+        position            : absolute
+        top                 : 0
+        left                : 0
+        width               : 100%
+        height              : 100%
+
+        opacity             : 0
+
+.contact-us
+    { container }
+
+    &__item
+        + .contact-us__item
+            margin-top       : 15px
+
+    &__label
+        display             : block
+        margin-bottom       : 5px
+        font-size           : 14px
+        font-weight         : regular
+
+        text-transform      : uppercaser
+
+    &__input, &__text, &__select
+        width               : 100%
+        border              : solid 1px #f0f0f0
+        padding             : 0 15px
+
+
+    &__input, &__select
+        height              : 40px
+
+    &__select
+        appearance          : none
+        background          : none
+        padding             : 0 15px
+
+    &__text
+        height              : 100px
+        padding-top         : 15px
+        padding-bottom      : 15px
+
+    &__actions
+        margin-top          : 15px
+
+    &__send
+        display             : flex
+        align-items         : center
+        justify-content     : center
+
+        width               : 100%
+        height              : 40px
+
+        border              : 0
+
+        font-size           : 14px
+        font-weight         : bold
+        text-transform      : uppercase
+
+        background          : color[0]
+        color               : #fff
+
+    &__content
+        font-size           : 14px
+        font-weight         : regular
+        line-height         : 1.2
+        margin-bottom       : 30px
+
+        p + p
+            margin-top      : 15px
+
+    &__msg
+        display             : block
+        padding             : 15px
+
+        font-size           : 14px
+        font-weight         : semi-bold
+
+        text-align          : center
+
+        color               : #fff
+
+        margin              : 15px 0
+
+
+        &--warning
+            background      : #deb94c
+
+        &--error
+            background      : #f00
+
+        &--success
+            background      : #0f0
+
+    .error
+        border-color: #f00
+
+@media (min-width: 992px)
+
+    .contact-us
+        &__container
+            display             : flex
+            flex-flow           : row wrap
+            margin              : -15px
+
+        &__header
+            order               : -2
+            flex                : 0 0 100%
+            padding             : 15px
+
+            h1
+                font-size       : 22px
+                font-weight     : bold
+
+                color           : color[0]
+
+        &__form, &__content
+            flex                : 0 0 50%
+            max-width           : 50%
+            padding             : 15px
+
+        &__form
+            order               : -1

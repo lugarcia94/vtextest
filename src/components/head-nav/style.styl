@@ -1,0 +1,325 @@
+#orders-page
+    ul.head-nav__sub
+        padding             : 20px
+
+        p 
+            margin-bottom   : 0
+
+    a 
+        color               : color[1]
+        font-style          : normal
+
+.head-nav
+    display                 : flex
+    justify-content         : space-between
+    align-items             : center
+    height                  : 100%
+    max-width               : 3540px
+    width                   : 100%
+
+    a#login
+        display: block
+        font-size: 15px
+        font-weight: 300
+        color: #fff
+        &:after
+            font-icon          : url('./svg/dropdown.svg')
+            font-size          : 7px
+            margin-left        : 2px
+            color              : #000
+    .welcome
+        color: #fff
+        font-size: 13px
+        cursor: pointer
+        font-weight: 700
+        a
+            text-decoration: none
+            &[href*="logout"]
+                color: color[1]
+                font-size: 0px
+                display: block
+                transition: all .3s
+                &:before
+                    content: 'Sair'
+                    font-size: 13px
+                    display: block
+                &:hover
+                    color: color[2]
+        
+
+    &__sub
+        position            : absolute
+        top                 : 160%
+        left                : 50%
+        padding             : 30px 20px
+        border-radius       : 7px
+
+        font-size           : 13px
+        font-weight         : regular
+
+        background          : #fff
+        color               : color[1]
+
+        visibility          : hidden
+        opacity             : 0
+
+        transition          : transition[0]
+        transform           : translateX(-50%)
+
+        box-shadow          : 0 0 5px 0 rgba(0,0,0,0.20)
+
+        &:before
+            content: ''
+            display: block
+            position: absolute
+            width: 26px
+            height: 26px
+            background: #fff
+            top: -10px
+            left: 50%
+            transform: translateX(-50%) rotate(45deg)
+            box-shadow: 0 0 5px 0 rgba(0,0,0,0.2)
+            border-radius: 7px
+        &:after
+            content: ''
+            display: block
+            position: absolute
+            width: 85%
+            height: 26px
+            background-color: #ffffff
+            top: 0px
+
+    &__link
+        .head-nav__item--lv1 > &
+            display             : flex
+            align-items         : center
+
+            font-size           : 13px
+            line-height         : 15px 
+            font-weight         : 400
+
+            color               : #fff
+
+            &[href*="#"]
+                pointer-events: none
+
+            &:hover
+                text-decoration : none
+
+            >div span 
+                display: block
+                font-weight: 700
+
+            >div .head-nav__dropdown-icon
+                font-weight: 400
+
+    &__dropdown-icon
+        font-size: 14px
+        font-weight: 300px
+        line-height: 17px
+ 
+    &__item
+        &--lv1
+            position            : relative 
+            display             : flex
+            align-items         : center
+            &:hover
+                &:after
+                    opacity         : 1
+                    max-width       : 100%
+
+            // &:nth-child(3)
+            //     > a
+            //         &:before
+            //             font-icon          : url('./svg/zap.svg')
+            //             font-size          : 20px
+            //             margin-right       : 3px
+            //             color              : #2cb742
+
+            &:nth-child(2)
+                > a
+                    &:before
+                        font-icon          : url('./svg/question.svg')
+                        font-size          : 30px
+                        margin-right       : 5px
+                        color              : #fff
+                // .head-nav__sub
+                //     left: -45%!important
+
+            &:nth-child(1)
+                &:before
+                    font-icon          : url('./svg/user.svg')
+                    font-size          : 30px
+                    margin-right       : 5px
+                    color              : #fff
+        &--lv2
+
+            + .head-nav__item--lv2
+                margin-top          : 10px
+
+            > a
+                font-size           : 13px
+                font-weight         : regular
+
+                line-height         : 1
+
+                color               : color[1]
+
+
+
+    [dropdown=true]
+
+ 
+
+        &:hover
+
+            .head-nav__sub
+                visibility    : visible
+                opacity       : 1
+
+
+.head-nav__sub
+    display                 : flex
+    flex-flow               : column nowrap
+
+    > .head-nav__item
+        order               : 1
+
+        .logout &:first-child
+            order           : 2
+            margin-top      : 0
+            border-top: 0
+
+        .logout &:nth-child(2)
+            margin-top      : 0
+
+.contact
+    > span 
+        display: flex 
+        align-items: center
+        width 100%
+        line-height: 23px
+    
+    &-item_call
+        font-size: 17px
+        color: #453F3F
+        line-height: 18px
+        padding-bottom: 13px
+        &:after
+            font-icon          : url('./svg/lk.svg')
+            font-size          : 19px
+            margin-left        : 7px
+            color              : color[0] 
+
+    .contact-item_tel , .contact-item_wts
+        font-size: 16px
+
+    .contact-item_skype, .contact-item_mail
+        font-size: 13px
+
+    .contact-item_tel , .contact-item_wts, .contact-item_skype, .contact-item_mail
+        color: #434343
+        font-weight: 500
+        a 
+            color: color[0]
+            font-size: 15px
+            line-height: 20px
+            transition: all .3s
+            &:hover
+                color: color[2]
+                text-decoration: none
+
+    .contact-item_tel
+        &:before
+            font-icon          : url('./svg/fone.svg')
+            font-size          : 16px
+
+    .contact-item_wts
+        &:before
+            font-icon          : url('./svg/zap2.svg')
+            font-size          : 16px
+
+    .contact-item_mail
+        a
+            color: color[2]
+            &:hover
+                color: color[0]
+                text-decoration: none
+        &:before
+            font-icon          : url('./svg/mail.svg')
+            font-size          : 13px
+            color              : color[2]!important
+    
+    .contact-item_time
+        font-size: 13px
+        color: #8B8A8A
+        line-height: 20px
+
+    .contact-item_social
+        padding-top: 15px
+        font-size: 14px
+        line-height: 18px
+        color: #453F3F
+        display: block
+
+    .contact-item_social-list
+        display: flex
+        align-items: center
+        a
+            display: flex
+            align-items: center
+            justify-content: center
+            width: 40px
+            height 40px
+            border-radius: 50%
+            background: #e6e6e6
+            margin-right 9px
+            margin-top: 5px
+            text-decoration: none
+        .contact-item_social-facebook
+            &:before
+                font-icon          : url('./svg/facebook.svg')
+                font-size          : 20px
+                line-height        : 20px 
+                color              : color[2]
+        .contact-item_social-instagram
+            &:before
+                font-icon          : url('./svg/instagram.svg')
+                font-size          : 20px
+                line-height        : 20px 
+                color              : color[2]
+        .contact-item_social-youtube
+            &:before
+                font-icon          : url('./svg/youtube.svg')
+                font-size          : 20px
+                line-height        : 20px 
+                color              : color[2]
+        .contact-item_social-blog
+            &:before
+                content: ''
+                display: block
+                width: 20px
+                height 20px
+                background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0MHB4IiBoZWlnaHQ9IjQwcHgiIHZpZXdCb3g9IjAgMCA0MCA0MCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4gICAgICAgIDx0aXRsZT5PdmFsIENvcHk8L3RpdGxlPiAgICA8ZGVzYz5DcmVhdGVkIHdpdGggU2tldGNoLjwvZGVzYz4gICAgPGcgaWQ9Ik92YWwtQ29weSIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+ICAgICAgICA8Y2lyY2xlIGZpbGw9IiNGM0VDRjIiIGN4PSIyMCIgY3k9IjIwIiByPSIyMCI+PC9jaXJjbGU+ICAgICAgICA8cGF0aCBkPSJNMzAuOTg5MTQ3NywyMy4xMDMxOTI3IEMzMC45ODIyODIsMjEuNTQxNjA1NCAzMC45Nzc0MDk1LDIwLjQxMzIwODcgMzAuMjAwMjUzNSwxOS40MjA1MjYgQzI5LjMxOTg5MDIsMTguMjk2NzI2IDI3Ljk2MjAyNjUsMTguMTA2Mjg4NSAyNi44NjEyOTU1LDE4LjA3Mzg5MjIgQzI3LjA0NjY3MDEsMTcuMjg4NzIwNyAyNy4xMDAyNjcxLDE2LjQxODE4MDcgMjcuMDE0NTU2MiwxNS40NzcxNTY5IEMyNi45OTEwNzk4LDEyLjM0MzI1NjUgMjQuNjMxNzA2LDEwLjA5MDYyMiAyMS4zNTcxOTcxLDEwLjAwMTMxMzQgTDIxLjMxMDAyMywxMCBMMTYuMzAxNTg1OCwxMC4wMDM5NDAxIEwxNi4yNDc3Njc0LDEwLjAwMzcyMTIgQzE0LjI5OTg5NDIsMTAuMDAzNzIxMiAxMi43NjAxOTk1LDEwLjU3ODUzNTkgMTEuNjcxMjA2NywxMS43MTE5NjcyIEMxMC45OTcyNTgsMTIuNDEzMDgzNiAxMC4xMDIwNTU4LDEzLjYzNzc5MzYgMTAuMDA3MjY0NSwxNS42MTgxMjQ0IEwxMC4wMDMyNzc5LDIzLjYwMzM2NDcgQzkuOTkzNTMzMDQsMjMuNzU0MTgyNCAxMC4wMDg4MTQ4LDIzLjkwNjUzMjQgMTAuMDA2ODIxNSwyNC4wNjMwNDE0IEMxMC4wMDY4MjE1LDI2LjMzNDkzODYgMTAuMzc0NjkxNiwyNy45NzAyOTMgMTEuNTIzNDgyOCwyOS4xNzg4MDQ4IEMxMi42NzEzODgsMzAuMzg3MzE2NyAxNC4zNjg3NzI5LDMxIDE2LjU2Nzc5ODksMzEgQzE2LjYxNTQxNiwzMSAxNi42NjM0NzYxLDMwLjk5OTc4MTEgMTYuNzExNTM2MiwzMC45OTkxMjQ0IEwyNC4zNjI4MzUzLDMwLjk5OTEyNDQgTDI0LjM4MDk5NjIsMzAuOTk5MTI0NCBDMjYuMzQyODIyMywzMC45ODI5MjYzIDI4LjAwMDU2MzIsMzAuMzQyODgxMyAyOS4xNzUwNDU1LDI5LjE0ODM3ODYgQzMwLjM0NzMxMywyNy45NTYwNjQ5IDMwLjk3ODUxNjksMjYuMjU3MjMxMyAzMSwyNC4yMzYxODYyIEMzMC45OTk3Nzg1LDI0LjIzNjE4NjIgMzAuOTkwNDc2NiwyMy40MjI1NTg2IDMwLjk4OTE0NzcsMjMuMTAzMTkyNyBaIE0xNi43MDc3NzExLDE0LjI1OTAxMzcgTDIwLjk4NzExMjMsMTQuMjUzOTc5MiBDMjEuOTk1NzA5OCwxNC4yNjk3Mzk1IDIyLjgwMDU1MDEsMTUuMTYyNjA2NyAyMi43ODQxNjEsMTYuMTU5NDQ4NCBDMjIuNzY4MjE0OCwxNy4xNDY0Mzk5IDIxLjk1Mzg1MSwxNy44NjY2IDIwLjk1ODc2MzUsMTcuODY2NiBDMjAuOTQ5MDE4NiwxNy44NjY2IDE2LjY0OTk2NjEsMTcuODY4MzUxMSAxNi42NDk5NjYxLDE3Ljg2ODM1MTEgQzE1LjY0MTM2ODcsMTcuODUyMzcxOSAxNC44MzY5NzEyLDE3LjAzMTUyMDcgMTQuODUzMTM4OSwxNi4wMzUxMTY4IEMxNC44NjkwODUxLDE1LjAzODI3NTEgMTUuNjk3ODQ0OCwxNC4yNDkzODI0IDE2LjcwNzc3MTEsMTQuMjU5MDEzNyBaIE0yNC43NTEzMDI1LDI2LjEzOTQ2NjUgTDE2LjE5Mjg0MTYsMjYuMTM5NDY2NSBDMTUuMTg0NDY1NiwyNi4xMzk0NjY1IDE0LjM2NjU1ODIsMjUuMzMxNTMwMSAxNC4zNjY1NTgyLDI0LjMzNDQ2OTUgQzE0LjM2NjU1ODIsMjMuMzM3NjI3OCAxNS4xODQ0NjU2LDIyLjUyOTQ3MjUgMTYuMTkyODQxNiwyMi41Mjk0NzI1IEwyNC43NTE1MjQsMjIuNTI5NDcyNSBDMjUuNzYwMzQyOSwyMi41Mjk0NzI1IDI2LjU3NzgwNzQsMjMuMzM3NjI3OCAyNi41Nzc4MDc0LDI0LjMzNDQ2OTUgQzI2LjU3NzgwNzQsMjUuMzMxNTMwMSAyNS43NjAxMjE0LDI2LjEzOTQ2NjUgMjQuNzUxMzAyNSwyNi4xMzk0NjY1IFoiIGlkPSJTaGFwZSIgZmlsbD0iI0Y0OEZCMSIgZmlsbC1ydWxlPSJub256ZXJvIj48L3BhdGg+ICAgIDwvZz48L3N2Zz4=")
+                background-size: auto
+                background-position: center
+                background-repeat: no-repeat
+                
+
+
+    .contact-item 
+        &_tel, &_wts, &_mail, &_skype 
+            &:before
+                margin-right       : 7px
+                color              : color[0] 
+
+@media(min-width: 992px)
+    .head-nav
+        width: 100%
+        &__sub 
+            min-width: 200px
+
+        &__item
+            &--lv1
+                > a 
+                    white-space         : nowrap

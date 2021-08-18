@@ -1,0 +1,18 @@
+{
+    "host": "https://wawcadeiras.vtexcommercestable.com.br", 
+    "debug": false,
+    "scrollTop": {
+        "debug": true,
+        "enabled": true,
+        "scrollingTop": true,
+        "scrollingDown": true
+    },
+    "wishlist": {
+        "enabled": true
+    },
+    "seller": {
+        "id": "1",
+        "name": "wawcadeiras",
+        "channel": "1"
+    }
+}

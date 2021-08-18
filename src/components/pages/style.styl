@@ -1,0 +1,696 @@
+
+.pages
+    display             : flex
+    justify-content     : center
+
+    margin              : 15px 0
+
+    .first, .last
+        display         : none
+
+
+    .page-number, .previous, .next
+        display         : flex
+        justify-content : center
+        align-items     : center
+
+        width           : 26px
+        height          : 26px
+ 
+        border-radius   : 7px
+        margin          : 1px
+
+        font-size       : 16px
+
+        background      : #fff
+        color           : #333333
+        overflow        : hidden
+
+        &.pgCurrent, &:hover
+            background  : color[0]
+            color       : #fff
+
+    .previous, .next
+        font-size       : 0
+
+        &:before
+            font-size   : 15px
+
+    .previous
+        &:before
+            font-icon   : url('./svg/next.svg')
+            transform   : scale(-1) 
+            color       : color[2]
+
+        &:hover
+            color   : #fff  
+
+    .next
+        &:before
+            font-icon   : url('./svg/next.svg')
+            color       : color[2]
+
+        &:hover
+            color   : #fff      
+
+.vitrine
+    margin-top              : 30px
+    margin-bottom           : 30px
+
+    .pager
+        display             : none
+
+.searchResultsTime
+    margin-top              : 15px
+
+    font-size               : 13px
+    font-weight             : regular
+
+    text-align              : center
+
+    color                   : color[1]
+
+    .resultado-busca-termo, .resultado-busca-tempo
+        display             : none
+
+.main
+    .sub
+        margin-top      : 15px
+
+
+
+
+.vitrine
+    + .searchResultsTime
+        + .sub .orderBy
+            display         : none
+
+.resultado-busca-filtro
+    font-size           : 13px
+    font-weight         : regular     
+
+    .compare, .filterBy
+        display         : none
+
+    .orderBy
+        white-space     : nowrap
+        text-align      : center
+
+        label, .SumoSelect
+            display         : inline-block
+            vertical-align  : middle
+
+        .SumoSelect
+            max-width       : 135px
+
+            > .CaptionCont
+                border-color    : #8b8a8a
+                border-radius   : 3px
+                > span
+                    height: 23px;
+                    line-height: 23px;
+                > label 
+                    display         : flex 
+                    justify-content : center 
+                    align-items     : center  
+                    &:before 
+                        font-icon   : url('./svg/down.svg') 
+                        font-size   : 5px
+                        color       : #8b8a8a
+
+                    > i
+                        display     : none 
+
+            > .optWrapper
+                width       : calc(100% + 100px)
+
+
+
+.searchResultsTime
+    display: none
+@media (min-width: 992px)
+    body.category
+        #main
+            { container }
+
+    .main
+        .sub
+            display     : flex
+            align-items : center
+            margin-top  : 0
+
+            .pages
+                margin  : 0
+
+    .searchResultsTime
+        flex            : 1 1 auto
+        margin-top      : 0
+        display         : none 
+        text-align      : left
+
+        .value
+            font-weight : 700
+            color       : color[0] 
+
+
+
+    .category__showcase
+        .breadcrumb
+            padding: 0
+
+.category__showcase .main
+    align-items     : center
+    display         : flex
+    flex-wrap        : wrap
+
+    > div
+        width 100%
+
+        &:first-child
+            order: 0
+
+        &:nth-child(2)
+            order: 2
+        &:nth-child(3)
+            order: 3
+        &:nth-child(4)
+            order: 1
+
+.empty-search
+    font-size: 13px
+    text-align: center
+    margin: 50px 0
+
+    .main__container
+        @extend $container
+        height: 50vh
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative
+        z-index: 0
+
+        h2
+            font-size: 22px
+            margin-bottom: 10px
+        .busca 
+            border: solid 1px #f0f0f0;
+
+        div.search
+            // width: 100%
+            // box-shadow: 0 0 10px rgba(0,0,0,.4)
+            margin: 20px auto
+            max-width: 700px
+
+
+        // &:before
+        //     display: none
+
+
+
+
+
+
+
+
+
+
+//Account
+$buttonAccount
+    height: 35px
+    line-height: 35px
+
+    background: color[2]
+    color: #ffffff
+
+    display: inline-block
+    padding: 0 20px
+    border-radius: 3px
+    margin: 10px 0
+
+    text-transform: uppercase
+    font-weight: 500
+
+    &:hover
+        background: color[0]
+        text-decoration: none
+
+.profile-detail-display
+    display: inline-block
+    padding: 20px
+    font-size: 13px
+    margin: 0
+
+    h4
+        font-size: 24px
+
+    h5
+        font-size: 16px
+
+.profile-detail-display-info
+    .title
+        font-weight: 500
+
+.edit-profile-link a
+    @extend $buttonAccount
+
+
+.modal
+    position            : fixed
+    top                 : 0
+    left                : 0
+    z-index             : 200
+
+    display             : block !important
+    width               : 100%
+    height              : 100%
+
+    background          : rgba(0,0,0,.5)
+
+    opacity             : 0
+    visibility          : hidden
+
+    transition          : transition[0]
+
+    > div:last-child, > form
+        position        : fixed
+        top             : 50%
+        left            : 50%
+
+        width           : 600px
+        height          : 600px
+
+        max-width       : 100%
+        max-height      : 100%
+
+        padding         : 40px 0 0
+
+        background      : #fff
+
+        transform       : translate(-50%, -50%) scale(.5)
+        transition      : transition[0]
+
+    > form
+        padding         : 50px 30px 30px
+
+    > div:last-child form
+        display         : block
+        width           : 100%
+        height          : 100%
+        overflow-y      : auto
+        padding         : 30px
+
+    &[aria-hidden=false]
+        opacity         : 1
+        visibility      : visible
+
+        > div:last-child, > form
+            transform       : translate(-50%, -50%) scale(1)
+
+    &-header
+        position        : fixed
+        top             : 0
+        left            : 0
+
+        display         : flex
+        justify-content : space-between
+        align-items     : stretch
+
+        width           : 100%
+
+        h3
+            flex                : 1 1 auto
+            order               : -1
+
+            display             : flex
+            justify-content     : flex-start
+            align-items         : center
+            padding-left        : 30px
+
+            font-size           : 16px
+            font-weight         : bold
+
+            text-transform      : uppercase
+
+            background          : color[0]
+            color               : #fff
+
+    .close
+        display         : flex
+        justify-content : center
+        align-items     : center
+
+        width           : 40px
+        height          : 40px
+        padding         : 0
+        border          : 0
+
+        background      : color[0]
+        color           : #fff
+
+        font-size       : 0
+        text-transform  : uppercase
+        line-height     : 1
+
+        &:before
+            content     : '+'
+            font-size   : 32px
+            margin-top  : -4px
+
+            transform   : rotate(45deg)
+
+    #profile-submit, .btn-link
+        @extend $buttonAccount
+        margin: 10px 0
+        border: 0
+
+    #profile-submit
+        background: color[0]
+        color: #fff
+
+    .btn-link
+        margin-left: 10px
+
+
+#business-toggle
+    font-size: 11px
+    font-weight: 500
+    background: color[0]
+    color: #ffffff
+    text-transform: uppercase
+    display: flex
+    justify-content: center
+    align-items: center
+
+    height: 40px
+    text-align: center
+
+    &:hover
+        background: color[1]
+        text-decoration: none
+
+
+.profile-detail-form
+    font-size: 0
+
+    margin: 0 -10px
+
+    h5
+        font-size: 22px
+        padding: 10px
+        padding-top: 0
+
+    input[type=text]
+        width: 100%
+        height: 40px
+        padding: 0 15px
+
+    .control-label
+        font-size: 13px
+
+    .control-group
+        font-size: 13px
+        width: 50%
+        padding: 10px
+
+        display: inline-block
+
+.profile-detail-form-business-data
+    border-top: solid 1px rgba(0,0,0,.1)
+    border-bottom:  solid 1px rgba(0,0,0,.1)
+    padding: 10px 0
+    margin: 10px 0
+
+.account
+    .catagory__main
+        text-align: center
+
+        display: flex
+        flex-wrap: wrap
+        // margin: 0 -10px
+        width: 100%;
+        max-width: 100%
+
+    .layout__col2--left
+        padding: 0
+
+.account__user-profile
+    display: inline-block
+    margin: 10px
+    text-align: left
+    flex: 1 1 auto
+
+    border: solid 1px rgba(0,0,0,.1)
+
+//#address-remove, #address-edit
+//    &[aria-hidden=true]
+//        display: none
+.account__orders
+    a 
+        height: 2.19rem;
+        line-height: 2.19rem;
+        // background: darken(color[0], 30%)
+        color: #fff;
+        display: inline-block;
+        padding: 0 1.25rem;
+        border-radius: 3px;
+        margin: 0.63rem 0;
+        text-transform: uppercase;
+        font-weight: 500;
+        &:hover
+            background: color[0]
+            text-decoration: none
+
+.account__address
+.account__orders
+    display: inline-block
+    padding: 20px
+    font-size: 13px
+    border: solid 1px rgba(0,0,0,.1)
+    vertical-align: top
+    margin: 10px
+    text-align: left
+    flex: 1 1 auto
+
+.address-display
+    margin: 10px 0
+
+    h5
+        font-weight: 500
+
+.edit-address-link
+    font-size: 0
+    text-align: right
+    margin-bottom: 10px
+
+    a
+        display: inline-block
+        background: color[0]
+        color: #fff
+        font-size: 10px
+        text-transform: uppercase
+        padding: 3px 10px
+        border-radius: 2px
+
+        + a
+            margin-left: 5px
+
+        &:hover
+            background: color[1]
+            text-decoration: none
+
+
+#address-edit
+    .address-label
+        font-size: 22px
+        margin: 0
+
+    .address-form
+        margin: 0 -10px
+
+        .row
+            > div
+                width: calc(50% - 40px)
+                display: inline-block
+                margin: 0 10px
+
+                .control-group
+                    width: 100%
+                    margin: 10px 0
+
+    .control-group
+        width: calc(50% - 40px)
+        display: inline-block
+        margin: 10px
+
+        input
+            width: 100%
+            height: 40px
+
+        select
+            width: 100%
+            height: 40px
+            border: solid 1px #f0f0f0
+
+    .address-form-neighborhood
+        width: calc(100% - 60px)
+
+    #form-submit, .btn-link
+        @extend $buttonAccount
+        border: 0
+
+    .btn-link
+        margin-left: 10px
+
+    #form-submit
+        background-color: color[0]
+
+        // &:hover
+        //     background-color:
+
+.new-address-link a
+    @extend $buttonAccount
+    margin: 10px 0
+    color: #ffffff
+
+#address-remove
+
+    position: fixed
+    display: inline-block !important
+    padding: 20px
+    margin: 0
+    font-size: 13px
+    flex: 1 1 auto
+
+    background: #ffffff
+
+    z-index: 100
+
+    top: 50%
+    left: 50%
+
+    transform: translate(-50%, -50%) scale(1)
+    width: 100%
+    height: 100%
+    overflow: auto
+    transition: all .2s ease-in-out
+
+
+    &[aria-hidden=true]
+        visibility: hidden
+        opacity: 0
+        transform: translate(-50%, -50%) scale(.5)
+
+    .close
+        position: absolute
+        top: 0
+        right: 0
+        padding: 0
+        width: 40px
+        height: 40px
+        font-size: 22px
+        font-weight: 700
+
+
+    #address-delete, .btn-link
+        @extend $buttonAccount
+        border: 0
+
+    .btn-link
+        margin-left: 10px
+
+    #address-delete
+        background-color: #f00
+
+        &:hover
+            background-color: darken(#f00, 20%)
+
+
+//@media (min-width: 600px)
+//    #editar-perfil, #address-edit, #address-remove
+//        width: auto
+//        height: auto
+
+
+
+
+
+//Orders
+.nav-pills>.active>a, .nav-pills>.active>a:hover, .nav-pills>.active>a:focus
+    background: color[0] !important
+    color: #ffffff !important
+
+.nav-tabs>li>a, .nav-pills>li>a
+    color: color[1] !important
+
+
+#account-page
+#orders-page
+
+    #main
+        @extend $container
+
+#orders-page 
+    font-family: "Source Sans Pro", sans-serif !important
+    overflow-x: hidden
+
+    .search__container
+        .busca input 
+            box-shadow: none
+
+    @media only screen and (min-width: 992px)
+        .menu__categories--nv1 
+            display: flex
+    
+    .breadcrumb
+        background: none 
+        // padding: 0
+
+    ul 
+        padding: 0 
+        margin: 0
+    input 
+        margin-bottom: 0
+
+    .page-header
+        a
+            display: flex;
+            align-items: center;
+            &:hover 
+                background: color[0] !important
+                color: color[1] !important
+
+
+
+
+body.institutional
+    .main__container
+        border-bottom: solid 1px rgba(0,0,0,.1)
+
+#institutional-page
+
+    .main__container 
+        padding: 40px 15px
+        @extend $container
+        border-bottom: 1px solid #EAEAEA
+    
+    .layout__main
+        max-width: 100%
+
+    h1
+        font-size: 25px
+        color: color[0]
+        margin: 10px 0
+
+    h2
+        font-size: 20px
+        color: color[0]
+        margin: 10px 0
+
+.institutional__container
+    font-size: 14px 
+
+    p 
+        margin-bottom: 10px 
+    strong 
+        font-weight: bold 

@@ -1,0 +1,540 @@
+star = './svg/star.svg';
+loading = 'data:image/svg+xml;base64,PHN2ZyBjbGFzcz0ibGRzLW1lc3NhZ2UiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHZpZXdCb3g9IjAgMCAxMDAgMTAwIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJ4TWlkWU1pZCIgc3R5bGU9ImJhY2tncm91bmQ6IG5vbmU7Ij48ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgyMCA1MCkiPgo8Y2lyY2xlIGN4PSIwIiBjeT0iMCIgcj0iNiIgZmlsbD0iI2ZmYjIwMCIgdHJhbnNmb3JtPSJzY2FsZSgwLjcxNjU1NiAwLjcxNjU1NikiPgogIDxhbmltYXRlVHJhbnNmb3JtIGF0dHJpYnV0ZU5hbWU9InRyYW5zZm9ybSIgdHlwZT0ic2NhbGUiIGJlZ2luPSItMC4zNzVzIiBjYWxjTW9kZT0ic3BsaW5lIiBrZXlTcGxpbmVzPSIwLjMgMCAwLjcgMTswLjMgMCAwLjcgMSIgdmFsdWVzPSIwOzE7MCIga2V5VGltZXM9IjA7MC41OzEiIGR1cj0iMXMiIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIj48L2FuaW1hdGVUcmFuc2Zvcm0+CjwvY2lyY2xlPgo8L2c+PGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNDAgNTApIj4KPGNpcmNsZSBjeD0iMCIgY3k9IjAiIHI9IjYiIGZpbGw9IiNmZmIyMDAiIHRyYW5zZm9ybT0ic2NhbGUoMC45NzEwNDggMC45NzEwNDgpIj4KICA8YW5pbWF0ZVRyYW5zZm9ybSBhdHRyaWJ1dGVOYW1lPSJ0cmFuc2Zvcm0iIHR5cGU9InNjYWxlIiBiZWdpbj0iLTAuMjVzIiBjYWxjTW9kZT0ic3BsaW5lIiBrZXlTcGxpbmVzPSIwLjMgMCAwLjcgMTswLjMgMCAwLjcgMSIgdmFsdWVzPSIwOzE7MCIga2V5VGltZXM9IjA7MC41OzEiIGR1cj0iMXMiIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIj48L2FuaW1hdGVUcmFuc2Zvcm0+CjwvY2lyY2xlPgo8L2c+PGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNjAgNTApIj4KPGNpcmNsZSBjeD0iMCIgY3k9IjAiIHI9IjYiIGZpbGw9IiNmZmIyMDAiIHRyYW5zZm9ybT0ic2NhbGUoMC45Mjc0ODQgMC45Mjc0ODQpIj4KICA8YW5pbWF0ZVRyYW5zZm9ybSBhdHRyaWJ1dGVOYW1lPSJ0cmFuc2Zvcm0iIHR5cGU9InNjYWxlIiBiZWdpbj0iLTAuMTI1cyIgY2FsY01vZGU9InNwbGluZSIga2V5U3BsaW5lcz0iMC4zIDAgMC43IDE7MC4zIDAgMC43IDEiIHZhbHVlcz0iMDsxOzAiIGtleVRpbWVzPSIwOzAuNTsxIiBkdXI9IjFzIiByZXBlYXRDb3VudD0iaW5kZWZpbml0ZSI+PC9hbmltYXRlVHJhbnNmb3JtPgo8L2NpcmNsZT4KPC9nPjxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDgwIDUwKSI+CjxjaXJjbGUgY3g9IjAiIGN5PSIwIiByPSI2IiBmaWxsPSIjZmZiMjAwIiB0cmFuc2Zvcm09InNjYWxlKDAuNjM5OTk5IDAuNjM5OTk5KSI+CiAgPGFuaW1hdGVUcmFuc2Zvcm0gYXR0cmlidXRlTmFtZT0idHJhbnNmb3JtIiB0eXBlPSJzY2FsZSIgYmVnaW49IjBzIiBjYWxjTW9kZT0ic3BsaW5lIiBrZXlTcGxpbmVzPSIwLjMgMCAwLjcgMTswLjMgMCAwLjcgMSIgdmFsdWVzPSIwOzE7MCIga2V5VGltZXM9IjA7MC41OzEiIGR1cj0iMXMiIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIj48L2FuaW1hdGVUcmFuc2Zvcm0+CjwvY2lyY2xlPgo8L2c+PC9zdmc+'
+
+color-selected     = #FFC928
+color-not-selected = #FFE6AB
+star-size          = 15px
+star-size-small    = 14px
+star-grap          = 6px
+
+$star-selected
+    color               : color-selected
+    font-size           : star-size 
+    line-height         : 1
+    letter-spacing      : star-grap 
+
+$star-not-selected
+    color               : color-not-selected
+    line-height         : 1
+    letter-spacing      : star-grap
+    font-size           : star-size
+
+.rating-demonstrativo[class*=avaliacao], .rating-produto[class*=avaliacao], 
+.a00, .a10, .a20, .a30, .a40, .a50
+    display             : inline-block
+    font-size           : 0
+    line-height         : 1
+    &:before, &:after 
+        font-icon       : url(star) 
+        @extend $star-selected
+    &:after 
+        opacity         : .5
+        @extend $star-not-selected
+
+.rating-produto[class*=avaliacao]
+    .review--short & 
+        &:before, &:after 
+            font-size   : star-size-small
+.rating-wrapper
+    display             : flex 
+    justify-content     : flex-start 
+    align-items         : center
+    margin-bottom       : 10px
+    .rating 
+        margin-left     : 10px 
+.review
+    &--short 
+        display             : flex 
+        justify-content     : flex-start 
+        align-items         : center 
+        > strong 
+            display         : none  
+    &__star 
+        font-size           : 13px 
+        font-weight         : normal 
+        color               : color[1]
+        &:before 
+            content         : '('  
+        &:after 
+            content         : ')'
+.ratingStar
+    font-size       : 0;
+    &:before 
+        font-icon   : url(star) 
+        @extend $star-selected
+    &.emptyRatingStar:before
+        @extend $star-not-selected
+
+.rating-avalie a 
+    font-size       : 0
+    text-decoration : none 
+
+.opiniaoRating
+    > div 
+        display: flex 
+        justify-content: flex-start 
+        align-items: center 
+        padding: 10px 0
+        label 
+            margin-right: 10px
+    a:hover 
+        text-decoration: none
+
+.opiniaoInfo
+    font-size: 11px
+    opacity: .6
+
+// Pagina de produto
+for item in '50' '45' '40' '35' '30' '25' '20' '15' '10' '0' '00'
+    .rating-demonstrativo, .rating-produto
+        &.avaliacao{ item }
+            if item == '50' || item == '45'
+                &:before
+                    content     : '\E000\E000\E000\E000\E000'
+                &:after
+                    content     : ''
+            if item == '40' || item == '35'
+                &:before
+                    content     : '\E000\E000\E000\E000'
+                &:after
+                    content     : '\E000'
+            if item == '30' || item == '25'
+                &:before
+                    content     : '\E000\E000\E000'
+                &:after
+                    content     : '\E000\E000'
+            if item == '20' || item == '15'
+                &:before 
+                    content     : '\E000\E000'
+                &:after     
+                    content     : '\E000\E000\E000'
+            if item == '10' || item == '05'
+                &:before 
+                    content     : '\E000'
+                &:after     
+                    content     : '\E000\E000\E000\E000'
+            if item == '0' || item == '00'
+                &:before 
+                    content     : ''
+                &:after     
+                    content     : '\E000\E000\E000\E000\E000'
+
+for item in '50' '40' '30' '20' '10' '0' '00'
+    .rating
+        &.a{ item }
+            if item == '50'
+                &:before
+                    content     : '\E000\E000\E000\E000\E000'
+                &:after
+                    content     : ''
+            if item == '40'
+                &:before
+                    content     : '\E000\E000\E000\E000'
+                &:after
+                    content     : '\E000'
+            if item == '30'
+                &:before
+                    content     : '\E000\E000\E000'
+                &:after
+                    content     : '\E000\E000'
+            if item == '20'
+                &:before 
+                    content     : '\E000\E000'
+                &:after     
+                    content     : '\E000\E000\E000'
+            if item == '10'
+                &:before 
+                    content     : '\E000'
+                &:after     
+                    content     : '\E000\E000\E000\E000'
+            if item == '0' || item == '00'
+                &:before 
+                    content     : ''
+                &:after     
+                    content     : '\E000\E000\E000\E000\E000'
+
+// Layout 
+rating-star-width = 150px
+rating-height-bar = auto
+rating-bar-radius = 3px
+
+.voteRatingStar
+    display         : inline-block
+
+.rating
+    li 
+        position            : relative
+        display             : flex 
+        justify-content     : flex-start 
+        align-items         : center 
+
+        span:last-child 
+            position        : absolute 
+            top             : 0 
+            left            : rating-star-width
+            display         : flex 
+            justify-content : flex-start 
+            align-items     : center  
+            width           : 'calc(100% - %s)' % rating-star-width
+            height          : 100% 
+            font-size       : 13px 
+            font-weight     : regular 
+            text-transform  : capitalize 
+            color           : #333333 
+            
+        + li 
+            margin-top      : 10px
+    .voteRatingStar
+        flex                : 0 0 rating-star-width
+    .voteRatingBar
+        position            : relative
+        flex                : 1 1 auto
+        height              : rating-height-bar
+        min-width           : 0
+        border-radius       : rating-bar-radius
+        overflow            : hidden 
+        > span 
+            display         : inline-block 
+            height          : 100%
+            background      : #FF7000
+            border-radius   : rating-bar-radius
+            left            : 0!important
+    .avaliacao 
+        > p:empty 
+            display         : none 
+.user-review
+    > h4, hr 
+        display             : none 
+.avaliacao
+    > .media
+        display             : none 
+
+.avalie-produto
+    margin                  : 30px 0 0
+    h5 
+        font-size           : 15px
+        font-weight         : 400
+        color               : color[0]
+        &:after 
+            content         : ': '
+#opcoes-avalie
+    margin                  : 20px 0 0
+    > p 
+        display             : none  
+    input 
+        display             : none 
+        &:checked + label:before 
+            background      : color[0]
+    label 
+        display             : flex 
+        justify-content     : flex-start 
+        align-items         : center 
+        font-size           : 13px
+        font-weight         : regular
+        line-height         : 1 
+        color               : #888888
+        margin-bottom       : 15px
+        cursor              : pointer
+        &:before 
+            content         : ''
+            display         : inline-block
+            width           : 15px 
+            height          : 15px 
+            vertical-align  : middle 
+            margin-right    : 3px 
+            background      : #e6e6e6
+            border-radius   : 3px 
+
+#lnkPubliqueResenha
+    display                 : flex 
+    justify-content         : center 
+    align-items             : center  
+    height                  : 40px 
+    border-radius           : 3px
+    font-size               : 11px
+    font-weight             : bold 
+    text-transform          : uppercase 
+    color                   : #fff
+    background              : color[0]
+    
+    &:hover 
+        text-decoration     : none 
+        opacity             : 0.9 
+
+.links-resenha-usuario
+    display                 : none 
+
+.resenhas
+    font-size               : 13px 
+    font-weight             : regular
+    color                   : #888888
+    .quem 
+        > li 
+            margin-top      : 15px
+            padding         : 15px
+            border-radius   : 3px
+            border          : 1px solid color[0]
+                
+        .dados
+            margin-bottom   : 10px
+        .opt-texto
+            position        : relative
+            background      : #fff 
+            border-radius   : 3px 
+            padding         : 15px
+            &:before 
+                content         : ''
+                width           : 10px 
+                height          : 10px 
+                border-radius   : 3px
+                position        : absolute 
+                top             : -6px
+                left            : 20px
+                background      : #fff
+                transform       : rotate(45deg)
+    .util
+        font-size           : 10px
+        margin-top          : 15px
+        padding-top         : 15px 
+        border-top          : solid 1px rgba(0,0,0,.1)
+        .bts
+            display         : flex 
+            justify-content : flex-start 
+            align-items     : center 
+            margin-top      : 15px
+            a 
+                display         : inline-block
+                padding         : 5px 15px
+                border-radius   : 3px
+                color           : #fff
+            li 
+                margin-right: 15px
+                &.sim a 
+                    background : #008000
+                &.nao a 
+                    background : #800000
+
+#resenha
+    top                         : 0 
+    left                        : 0 
+    z-index                     : 200 
+    width                       : 100%
+    height                      : 100% 
+    background                  : #fff 
+    transition                  : all .2s ease-in-out
+     
+ 
+    .on &
+        visibility          : visible 
+        opacity             : 1
+        transform           : translate3d(0,0,0) 
+#opiniao_de_usuario
+    padding                     : 20px  0
+    height                      : calc(100% - 45px)
+    overflow-y                  : auto
+
+// Light de Publish
+.formUserComment
+    background              : #fff
+    min-height              : 100px
+    font-size               : 13px 
+    font-weight             : regular 
+    position                : relative 
+    > h2 
+        padding-top         : 30px
+        &:after 
+            position            : absolute 
+            right               : 0
+            top                 : 0
+            display             : flex 
+            width               : 45px 
+            height              : 45px 
+            justify-content     : center 
+            align-items         : center 
+            background          : #ffb200
+            color               : #fff 
+            border-radius       : 3px
+
+            font-icon           : url('./svg/close.svg')
+            font-size           : 20px 
+
+#publishUserReview
+    background                  : #fff
+    opacity                     : 0 
+    visibility                  : hidden 
+    transition                  : all .2s ease-in-out
+
+    background-image            : url(loading) 
+    background-repeat           : no-repeat 
+    background-position         : center center  
+    background-size             : 300px 100px
+
+    .review--publish & 
+        opacity                 : 1 
+        visibility              : visible 
+        min-height              : 100px
+
+#formUserReview
+    font-size                   : 13px
+    font-weight                 : regular
+    .header 
+        margin                  : 15px 0 30px
+        position                : relative 
+        h1 
+            display             : none 
+        h2 
+            font-size           : 20px 
+            font-weight         : regular  
+            line-height         : 45px 
+
+        .close a 
+            position            : absolute 
+            font-size           : 0 
+            right               : 0 
+            top                 : 0 
+            display             : flex 
+            width               : 45px 
+            height              : 45px 
+            justify-content     : center 
+            align-items         : center
+            color               : #fff 
+            border-radius       : 3px
+            &:before 
+                font-icon       : url('./svg/close.svg')
+                font-size       : 14px
+                background      : color[0] 
+                padding         : 8px
+                border-radius   : 3px
+            &:hover 
+                text-decoration : none
+    input[type=text], textarea 
+        width                   : 100% 
+        border                  : solid 1px rgba(0,0,0,.1)
+        border-radius           : 3px
+        padding                 : 15px
+    input[type=text]
+        height                  : 45px 
+    textarea 
+        height                  : 200px
+    .grp
+        position                : relative
+        margin-bottom           : 20px
+    .fTitulo, .fComentario
+        label 
+            display                 : block
+            padding-left            : 10px 
+            padding-bottom          : 10px
+        span 
+            position            : absolute 
+            top                 : 0 
+            left                : 0   
+    .aviso-resenha 
+        border-radius           : 3px
+        padding                 : 15px 
+        background              : #ff6961
+        color                   : #fff 
+        margin                  : 15px 0
+
+    .avaliar a 
+        display                 : flex 
+        justify-content         : center 
+        align-items             : center  
+        height                  : 45px 
+        font-size               : 13px 
+        font-weight             : bold 
+        text-transform          : uppercase 
+        color                   : #fff 
+        background              : color[0]
+        border-radius           : 3px 
+        margin-bottom           : 30px 
+        &:hover 
+            text-decoration : none  
+            background      : darken(color[0], 10%)
+
+form#formUserReview .footer .close a 
+    display: none
+
+
+@media (min-width: 992px)
+    .product__review:before 
+        content             : ''
+        position            : fixed 
+        top                 : 0 
+        left                : 0 
+        z-index             : 204
+        width               : 100% 
+        height              : 100% 
+        background          : rgba(0,0,0,.5)
+        opacity             : 0 
+        visibility          : hidden 
+        transition          : transition[0] 
+    .review--publish:before
+        opacity             : 1 
+        visibility          : visible 
+    #resenha
+        position            : static 
+        visibility          : visible 
+        opacity             : 1
+        height              : auto 
+        width               : auto 
+        transform           : none  
+        padding-top         : 30px
+        &:before, &:after 
+            display         : none 
+    #opiniao_de_usuario
+        padding             : 0 
+        height              : auto
+    .avaliacao
+        display                 : grid 
+        grid-template-areas     : "col-left col-right" "col-left buttons"  "message message"
+        grid-template-columns   : 1fr 1fr  
+        grid-template-rows      : min-content 1fr
+        .rating
+            grid-area       : col-left 
+            li 
+                max-width   : 460px
+        .avalie-produto
+            grid-area       : col-right
+            margin-top      : 0
+            h5, .rating-avalie-wrapper
+                display         : inline-block
+                vertical-align  : middle  
+        .opt
+            grid-area       : buttons
+            .bt 
+                max-width   : 170px
+        .resenhas
+            grid-area       : message
+        #opcoes-avalie
+            label 
+                display         : inline-block 
+                vertical-align  : middle
+                margin-right    : 20px 
+                &:last-child 
+                    margin-right: 0
+    #publishUserReview
+        position                : fixed 
+        top                     : 50%
+        left                    : 50%
+        z-index                 : 205 
+        height                  : auto 
+        width                   : 500px
+        max-height              : 90vh 
+        border-radius           : 3px
+        overflow                : auto 
+        transform               : translateY(-50%) translateX(-50%)
+        padding                 : 20px 
+        box-shadow              : 0 0 100px rgba(0,0,0,.1) 
+        opacity                 : 0 
+        visibility              : hidden 
+        transition              : transition[0]  
+        .review--publish & 
+            opacity             : 1 
+            visibility          : visible
+    #formUserReview 
+        .header
+            margin                  : 0
+        .avaliar a
+            margin-bottom           : 0
+
+    

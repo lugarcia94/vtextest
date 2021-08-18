@@ -1,0 +1,174 @@
+
+
+.buytobether
+
+    table 
+        tr 
+            display: table
+            margin-bottom: 60px
+
+            @media(max-width: 991px)
+                display: flex
+                flex-wrap: wrap
+                position: relative
+                justify-content: space-between
+
+                .plus 
+                    position: absolute
+                    left: 50%
+                    transform: translateX(-50%)
+                    top: 30%
+                    background: transparent
+
+                td
+                    flex: 0 0 48%
+                    padding: 0!important
+
+                td.buy
+                    flex: 0 0 100%
+
+                a
+                    text-align: left
+
+
+    table, hr, .cj-parcela + strong 
+        display             : none 
+    &__container 
+        z-index             : 200
+        width               : 100% 
+        height              : 100% 
+        background          : #fff  
+        transition          : transition[0]
+        padding             : 30px 0 0
+        .on & 
+            transform       : translate3d(0, 0, 0)
+            opacity         : 1 
+            visibility      : visible 
+        &.actived table 
+            display         : table
+    &__close 
+        display: none
+    table 
+        h3, a 
+            font-size       : 13px 
+            font-weight     : regular 
+            color           : #453F3F
+            text-decoration : none
+            &:hover
+                color   : color[0] 
+        h3 
+            display     : block
+            margin      : 20px 0
+        a
+            display     : inline-block
+            width       : 100%
+
+            img  
+                margin  : 0 auto
+                display : block
+
+        .cj-text, .cj-itens
+            font-size       : 20px
+            color           : #453F3F 
+            font-weight     : 400  
+            text-align      : left
+
+        .cj-price
+            display     : block 
+            font-size   : 22px
+            font-weight : bold 
+            color       : color[2]
+            text-align  : left
+            margin-top  : 20px 
+
+        .cj-parcela, .cj-parcela strong 
+            font-size   : 16px
+            font-weight : regular
+            text-align  : left
+
+        .cj-parcela
+            color: #453F3F
+            font-weight: 700
+            font-size: 25px
+
+            strong 
+                color: color[0]
+                font-weight: 700
+                font-size: 25px
+
+    #lnkVejaMais
+        display         : none 
+
+    #lnkComprar
+        display         : flex 
+        justify-content : center 
+        align-items     : center   
+        width           : 200px
+        height          : 50px
+        margin          : 10px 0
+        background      : #00954c
+        color           : #fff
+        font-size       : 16px
+        font-weight     : semi-bold 
+        text-transform  : uppercase
+        border-radius   : 5px
+        font-size       : 0
+
+        @media(max-width: 991px)
+            width: 100%
+
+        &:hover
+            opacity: 0.89
+
+        &:before
+            font-size: 19px
+            content:  'Comprar'
+            letter-spacing: 2px
+            font-weight: 500
+
+    .plus, .equal
+        width           : 50px 
+        font-size       : 33px 
+        font-weight     : bold 
+        background      : #fff 
+        color           : color[0]
+    .buy 
+        text-align      : left 
+
+@media (max-width: 991px)
+    .buytobether
+        .equal 
+            display         : none 
+        table 
+            height          : 100%
+            overflow-y      : auto
+            padding         : 0 15px  
+        .actived table, tr, td, th, tbody 
+            display         : block 
+        td
+            text-align      : center 
+        .itemA 
+            border-radius   : 3px 
+            padding         : 20px 
+        .plus 
+            display         : flex 
+            justify-content : center 
+            align-items     : center  
+            margin          : -25px auto 0
+            height          : 50px  
+@media (min-width: 992px)
+    .buytobether
+        {container} 
+        margin-top 85px
+
+        table 
+            width           : 100%
+            max-width       : 870px
+        td 
+            max-width       : 250px
+        &__container
+            position        : static 
+            visibility      : visible 
+            opacity         : 1 
+            transform       : none  
+ 

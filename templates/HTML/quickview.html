@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common" xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce">
+    
+    <head>
+        <vtex:template id="00-likecosmeticos-head" />
+    </head>
+    <body id="product-page">
+        <div class="wrapper">
+
+            <div class="wrapper__container">
+            
+                <main class="main" id="main">
+                    <div class="product__container">
+                        <div id="produto" class="product__image">
+                            <vtex.cmc:ProductImage zoom="on"/>
+                            <div class="labels product__labels">
+                                <div class="labels-colection" role="group">
+                                    <span class="labels-discount">
+                                        <vtex.cmc:discountHightLight/>
+                                    </span>
+                                    <span class="labels-featured">
+                                        <vtex.cmc:HightLight/>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="product__info">
+                            <h1 class="product__name"><vtex.cmc:productName /></h1>
+
+                            <div class="product__sku-review">
+                                <div class="review review--short">
+                                    <vtex.cmc:evaluationRate/><span class="review__star"></span>
+                                </div>                            
+                                <span class="product__code"><vtex.cmc:skuReference/></span>
+                                <vtex.cmc:brandName/>
+                            </div>
+
+                            <div class="product__prices">
+
+                                <div class="product__description product__description--short">
+                                    <span class="description-title">Diferenciais do produto</span>
+                                    <div class="description-short"><vtex.cmc:productDescriptionShort /></div>
+                                </div>
+                                
+                                <div class="product__attrs product__attrs--dimensoes" data-attr="Dimensões"></div>
+                                <div class="product__attrs product__attrs--outras-informacoes" data-attr="Outras informações"></div>
+
+                                <!--  Component: Sales channels -->
+                                <vtex.cmc:SalesChannelDropList />
+                            
+                                <!--  Component: Addicional services -->
+                                <vtex.cmc:stockKeepingUnitService />
+                                
+                                <div class="product__variations-single">
+                                    <vtex.cmc:stockKeepingUnitSelection />
+                                </div>
+          
+                            </div>
+
+                        </div>
+                        <div class="product__right--colunm">
+                            <!--  Component: Sellers -->
+                            <vtex.cmc:SellerOptions />
+                    
+                            <div class="product__price" data-component="wholesale-prices"></div>
+                            <div class="product__price"><vtex.cmc:skuPrice/></div>
+                            
+                           <div class="product__other-payment">
+                                <span class="product__btn-other-payment">Ver opções de parcelamento</span>
+                                <vtex.cmc:OtherPaymentMethod/>
+                            </div>
+                            
+                            <div class="product__actions" data-component="wholesale-actions">
+                                <button disabled="disabled" type="button" class="product__buy">COMPRAR</button>
+                            </div>
+                                    
+                            <div class="product__actions product__actions--button">
+                                <div class="product__buy-qtds">
+                                    <div class="product__qtds">
+                                        <div class="qtds">
+                                            <button class="qtds__button qtds__button--less" type="button"> - </button>
+                                            <input type="number" class="qtds__input" />
+                                            <button class="qtds__button qtds__button--more" type="button"> + </button>
+                                        </div>
+                                    </div>
+                                    <vtex.cmc:BuyButton />
+                                </div>
+                            </div>
+                            
+                            <div class="product__page">
+                                <a href="/" target="_parent">veja o produto</a>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+                </main>
+                
+            </div>
+
+            <vtex:template id="00-likecosmeticos-scripts" />
+
+            <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5c3e05e02fc28ae3"></script>
+        </div>
+        
+    </body>
+
+</html>

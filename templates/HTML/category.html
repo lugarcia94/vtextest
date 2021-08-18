@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common" xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce">
+<head>
+    <vtex:template id="00-likecosmeticos-head" />
+</head>
+<body>
+<div class="wrapper">
+    <vtex:template id="00-likecosmeticos-menu" />
+
+    <div class="wrapper__container">
+        <vtex:template id="00-likecosmeticos-header" />
+
+        <main class="main" id="main">
+            <div class="main__container layout layout--left" id="main__container">
+                <aside class="sidebar category__sidebar layout__left">
+                    <div class="sidebar__container">
+                        <header class="sidebar__header">
+                            <h4 class="sideebar__title">Filtrar sua busca</h4>
+                            <button type="button" class="button sidebar__button sidebar__button--close">X</button>
+                        </header>
+
+                        <div class="sidebar__main">
+                            <vtex.cmc:searchNavigator/>
+                        </div>
+                    </div>
+
+                    <button class="button sidebar__button sidebar__button--open">
+                        <svg id="icon-ic_filter_list_black_24px" viewBox="0 0 32 32">
+                            <path d="M13.333 24h5.333v-2.667h-5.333v2.667zM4 8v2.667h24v-2.667h-24zM8 17.333h16v-2.667h-16v2.667z"></path>
+                        </svg>
+                    </button>
+                </aside>
+
+                <div class="catagory__main layout__main">
+                    
+                    <div class="category__showcase showcase">
+                        <div class="showcase__container">
+                            <section class="breadcrumb">
+                                <div class="breadcrumb__container">
+                                    <vtex.cmc:breadCrumb />
+                                </div>
+                            </section>
+                            <div class="banner banner--category">
+                                <div class="banner__container">
+                                    <vtex:contentPlaceHolder id="bannerCategory" />
+                                </div>
+                            </div>
+                            <div class="tags__filter">
+                                <span class="tags__filter-title">Ordenar por:</span>
+                                <ul class="tags__filter-list">
+                                    <li><a href="O=OrderByPriceDESC">Menor Preço</a></li>
+                                    <li><a href="O=OrderByPriceASC">Menor Preço</a></li>
+                                    <li><a href="O=OrderByPriceDESC">Maior Preço</a></li>
+                                    <li><a href="O=OrderByTopSaleDESC">Mais vendidos</a></li>
+                                    <li><a href="O=OrderByReviewRateDESC">Melhores avaliações</a></li>
+                                    <li><a href="O=OrderByNameASC">A - Z</a></li>
+                                    <li><a href="O=OrderByNameDESC">Z - A</a></li>
+                                    <li><a href="O=OrderByReleaseDateDESC">Data de lançamento</a></li>
+                                    <li><a href="O=OrderByBestDiscountDESC">Melhor Desconto</a></li>
+                                </ul>
+                            </div>
+                            <vtex.cmc:searchResult layout="330a2a51-c9c4-4db5-8eba-bf7649ea3d92" itemCount="12"  columnCount="12" />
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </main>
+        
+        <div class="news-rulers">
+            <div class="news-rulers__item news">
+                <vtex.cmc:newsletterOptIn/>
+            </div>
+            <div class="news-rulers__item rulers">
+                <ul class="rulers__list">
+                    <vtex.cmc:rulers />
+                </ul>
+            </div>
+        </div>
+
+        <vtex:template id="00-likecosmeticos-footer" />
+        <vtex:template id="00-likecosmeticos-scripts" />
+        <vtex.cmc:productQuickView/>
+    </div>
+</div>
+</body>
+</html>

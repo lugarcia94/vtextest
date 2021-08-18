@@ -1,0 +1,93 @@
+<header id="header" class="header">
+
+    <section class="banner banner--header">
+        <div class="banner__container">
+            <a href="#banner-header">
+                <img src="/arquivos/banner_header.jpg" alt="Banner Header" />
+            </a>
+        </div>
+    </section>
+
+    <div class="header__container">
+        <div class="header__button-menu">
+            <button class="button button__menu" type="button"><span class="lines"></span></button>
+        </div>
+        <div class="header__logo">
+            <div class="logo">
+                <h1>
+                    <a href="/">
+                        <img src="/arquivos/logo.png" alt="wawcadeiras - cosméticos" />
+                        <span>wawcadeiras - cosméticos</span>
+                    </a>
+                </h1>
+            </div>
+        </div>
+        <div class="header__search">
+            <div class="search search--header">
+                <div class="search__container">
+                    <vtex.cmc:fullTextSearchBox/>
+                </div>
+            </div>
+        </div>
+        <div class="header__head-nav">
+            <ul class="head-nav">
+
+                <li class="head-nav__item head-nav__item--lv1" dropdown="true">
+                    <a href="#" class="head-nav__link">minha conta</a>
+
+                    <ul class="head-nav__sub">
+                        <li class="head-nav__item head-nav__item--lv2">
+                            <vtex.cmc:welcomeMessage />
+                        </li>
+                        <li class="head-nav__item head-nav__item--lv2">
+                            <a href="#link" class="head-nav__link">Cadastrar nova conta</a>
+                        </li>
+                        <li class="head-nav__item head-nav__item--lv2">
+                            <a href="#link" class="head-nav__link">Lista de desejo</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="head-nav__item head-nav__item--lv1">
+                    <a href="#" class="head-nav__link">meus pedidos</a>
+                </li>
+
+                <li class="head-nav__item head-nav__item--lv1" dropdown="true">
+                    <a href="#" class="head-nav__link">Atendimento</a>
+
+                    <ul class="head-nav__sub">
+                        <li class="head-nav__item head-nav__item--lv2">
+                            <div class="contact">
+                                <vtex.cmc:contactAtendimento />
+                            </div>
+                        </li>
+                        <li class="head-nav__item head-nav__item--lv2">
+                            <div class="contact">
+                                <vtex.cmc:contact />
+                            </div>
+                            <div class="social">
+                                <ul class="social__list">
+                                    <vtex.cmc:social />
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="head-nav__item head-nav__item--lv1">
+                    <vtex.cmc:blog />
+                </li>
+            </ul>
+        </div>
+        <div class="header__cart">
+            <button class="button button__minicart">
+                <span class="button__minicart-text" >Menu Carrinho</span>
+                <span class="button__minicart-qty" data-cart="amount">0</span>
+            </button>
+        </div>
+    </div>
+
+    <div id="menu" class="menu"></div>
+    <div id="minicart" class="minicart"></div>
+
+</header>

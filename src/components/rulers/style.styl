@@ -1,0 +1,65 @@
+.ruler
+    .slick-prev
+        left 0
+        
+    .slick-next
+        right 0
+        
+    &__container
+        max-width: 1320px
+        width: 100%
+        padding: 0 15px
+        margin: 0 auto
+    &__wrapper
+        padding: 13px 0
+    &__list
+        display: flex
+        align-items: center
+        justify-content: space-between
+    &__title
+        font-size: 15px
+        color: color[2]
+        font-weight: 500
+        display: block
+    &__sub
+        display: block
+        color: #453F3F
+        font-size: 13px
+        font-weight: 300
+        line-height: 14px
+    &__item 
+        display: flex!important
+        align-items: center
+        @media(max-width : 991px)
+            justify-content: center!important
+            margin-right: 45px
+            padding-bottom: 20px
+        &--truckage
+            &:before
+                font-icon          : url('./svg/truck.svg')
+                font-size          : 26px
+                margin-right       : 4px
+                color              : color[0]
+        &--warranty
+            justify-content: center
+            &:before
+                font-icon          : url('./svg/box.svg')
+                font-size          : 36px
+                margin-right       : 4px
+                color              : color[0]
+        &--original
+            justify-content: center
+            &:before
+                font-icon          : url('./svg/like.svg')
+                font-size          : 37px
+                margin-right       : 4px
+                color              : color[0]
+        &--safe
+            justify-content: flex-end
+            &:before
+                font-icon          : url('./svg/safe.svg')
+                font-size          : 37px
+                margin-right       : 4px
+                color              : color[0]
+    &__content
+        white-space: nowrap

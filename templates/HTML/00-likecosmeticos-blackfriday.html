@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common"
+    xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce">
+
+<head>
+    <vtex:template id="00-likecosmeticos-head" />
+</head>
+
+<body id="blackfriday-page">
+
+    <div class="blackfriday_header">
+        <vtex:contentPlaceHolder id="blackfriday_header" />
+    </div>
+
+    <vtex:contentPlaceHolder id="blackfriday_banner" />
+
+    <div class="wrapper">
+
+        <div class="wrapper__container">
+
+            <main class="main" id="main">
+                <div class="main__container layout__col1" id="main__container">
+                    <div class="layout__main">
+                        <section class="products_row">
+                            <div class="bkf_minibanner">
+                                <vtex:contentPlaceHolder id="minibanner00" />
+                            </div>
+                            <div class="products_showcase">
+                                <vtex:contentPlaceHolder id="products00" />
+                            </div>
+                        </section>
+                        <section class="products_row">
+                            <div class="products_showcase">
+                                <vtex:contentPlaceHolder id="products01" />
+                            </div>
+                            <div class="bkf_minibanner">
+                                <vtex:contentPlaceHolder id="minibanner01" />
+                            </div>
+                        </section>
+
+                        <section class="banner_row">
+                            <vtex:contentPlaceHolder id="banner_wide-01" />
+                        </section>
+
+                        <section class="products_row">
+                            <div class="bkf_minibanner">
+                                <vtex:contentPlaceHolder id="minibanner-02" />
+                            </div>
+                            <div class="products_showcase">
+                                <vtex:contentPlaceHolder id="products-02" />
+                            </div>
+                        </section>
+                        <section class="products_row">
+                            <div class="products_showcase">
+                                <vtex:contentPlaceHolder id="products-03" />
+                            </div>
+                            <div class="bkf_minibanner">
+                                <vtex:contentPlaceHolder id="minibanner-03" />
+                            </div>
+                        </section>
+
+                        <section class="banner_row">
+                            <vtex:contentPlaceHolder id="banner_wide-02" />
+                        </section>
+
+                        <section class="products_row">
+                            <div class="products_showcase">
+                                <vtex:contentPlaceHolder id="products-04" />
+                            </div>
+                            <div class="bkf_minibanner">
+                                <vtex:contentPlaceHolder id="minibanner-04" />
+                            </div>
+                        </section>
+
+                    </div>
+                </div>
+            </main>
+            <section class="blackfriday_footer">
+                <vtex:contentPlaceHolder id="footer_banner" />
+            </section>
+
+        </div>
+
+        <vtex:template id="00-likecosmeticos-scripts" />
+
+    </div>
+
+</body>
+
+</html>

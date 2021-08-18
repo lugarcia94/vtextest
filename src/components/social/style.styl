@@ -1,0 +1,48 @@
+.social
+
+
+    &__list
+        display                 : flex
+        justify-content         : space-between
+        align-items             : center
+        max-width               : 125px
+        width                   : 100%
+
+        li  
+            display: flex
+            align-items: center
+
+            a  
+                font-size: 12px
+                letter-spacing: 0.2px
+                color: #434343
+                font-weight: 600
+
+                &:hover
+                    color: color[2]
+                    text-decoration: none
+    
+
+
+@media screen and (max-width: 991px)
+    .social
+        &--center
+            .social__list
+                justify-content : space-between
+
+
+
+@media screen and (min-width: 992px)
+    .social 
+        &__list 
+            flex                    : 0 0 140px
+            max-width               : none 
+            width                   : auto
+            li 
+                flex                : 1 1 35px
+            li + li 
+                margin-left         : 8px
+    .footer .social--center
+        .social__list
+            justify-content : flex-start
+

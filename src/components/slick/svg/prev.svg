@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="35px" height="35px" viewBox="0 0 35 35" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>seta showcase copy 2</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="0%" y1="1.3671875%" x2="100.397892%" y2="1.3671875%" id="linearGradient-1">
+            <stop stop-color="color[0]" offset="0%"></stop>
+            <stop stop-color="color[0]" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Home" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="produto-like" transform="translate(-341.000000, -210.000000)">
+            <g id="Meio" transform="translate(313.000000, 168.000000)">
+                <g id="Porduto" transform="translate(2.000000, 0.000000)">
+                    <g id="imagens" transform="translate(13.000000, 32.000000)">
+                        <g id="Group-26" transform="translate(0.000000, 10.000000)">
+                            <g id="seta-showcase" transform="translate(30.500000, 17.500000) scale(-1, 1) rotate(-270.000000) translate(-30.500000, -17.500000) translate(13.000000, 0.000000)">
+                                <circle id="Oval" fill="#e6e6e6" cx="17.5" cy="17.5" r="17.5"></circle>
+                                <g id="left-arrow-(44)" transform="translate(9.680851, 11.170213)" fill="url(#linearGradient-1)" stroke-width="1">
+                                    <g id="Path">
+                                        <path d="M15.1006179,5.27666829 L15.1255935,5.28199512 L4.41912195,5.28199512 L7.78484553,1.99318537 C7.94965854,1.83261951 8.04006504,1.61510732 8.04006504,1.38681463 C8.04006504,1.15852195 7.94965854,0.942531707 7.78484553,0.781585366 L7.26113821,0.270717073 C7.09645528,0.11015122 6.87700813,0.0213707317 6.64299187,0.0213707317 C6.40884553,0.0213707317 6.18926829,0.109517073 6.02458537,0.270082927 L0.255089431,5.89483415 C0.0897560976,6.05603415 -0.000650406504,6.2707561 1.27054942e-21,6.49917561 C-0.000650406504,6.72886341 0.0897560976,6.9437122 0.255089431,7.10465854 L6.02458537,12.7299171 C6.18926829,12.8903561 6.40871545,12.9786293 6.64299187,12.9786293 C6.87700813,12.9786293 7.09645528,12.8902293 7.26113821,12.7299171 L7.78484553,12.2190488 C7.94965854,12.0587366 8.04006504,11.8446488 8.04006504,11.6163561 C8.04006504,11.3881902 7.94965854,11.1853902 7.78484553,11.0249512 L4.38113821,7.71775122 L15.1125854,7.71775122 C15.5947967,7.71775122 16,7.31253171 16,6.84262927 L16,6.12008293 C16,5.65018049 15.5828293,5.27666829 15.1006179,5.27666829 Z" fill-rule="nonzero"></path>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

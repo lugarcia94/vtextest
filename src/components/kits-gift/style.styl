@@ -1,0 +1,29 @@
+
+.kits-gift__container
+    { container }
+
+    padding-top             : 50px
+    margin-top              : 50px
+    border-top              : solid 1px #E9E9E9
+
+    .showcase__item:hover
+        box-shadow          : none
+
+    @media (min-width: 992px)
+        display             : flex
+
+        .kits
+            flex            : 1 1 auto
+            max-width       : calc(100% - 250px)
+
+            border-right    : solid 1px #E9E9E9
+
+        .gift
+            flex            : 0 0 250px
+            max-width       : 250px
+
+            .slick-prev
+                left        : -15px
+
+            .slick-next
+                right       : -15px

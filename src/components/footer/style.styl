@@ -1,0 +1,99 @@
+.footer     
+    .category &
+        margin-top      : 20px
+
+    &__container
+        { container } 
+        display             : flex
+        justify-content     : space-between
+        flex-wrap           : wrap
+
+    &__nav
+        display         : inline-block
+        vertical-align  : top 
+        padding-top     : 25px
+        @media(max-width : 475px)
+            flex: 1 1 100%
+            text-align: center
+
+        .head-nav__link
+            display: none
+        .head-nav__sub
+            position: static
+            transform: none
+            opacity: 1
+            visibility: visible
+            box-shadow: none
+            padding: 0
+            &:before, &:after
+                display: none
+        &--social
+            .contact-item_call, .contact-item_tel, .contact-item_wts, .contact-item_mail,
+            .contact-item_time
+                display: none
+            .contact-item_social
+                font-size: 0px
+                padding: 0
+                line-height: 0px
+            .contact-item_social-list
+                @media(max-width : 475px)
+                    justify-content: center
+            
+        .contact
+            @media(max-width : 475px)
+                justify-content: center
+                span
+                    justify-content: center
+                    text-align: center
+
+        &--contact
+            .contact-item_call, .contact-item_social
+                display: none
+
+    &__title
+        display         : block
+        font-size       : 15px
+        line-height     : 18px 
+        font-weight     : 400
+        color           : color[1]
+        margin-bottom   : 8px 
+@media screen and (min-width: 992px)
+    .footer
+ 
+        &__nav
+            &--payment
+                max-width       : 345px
+
+            &--security
+                max-width       : 215px
+
+.nav__container 
+    display: flex
+    justify-content: space-between
+    width: 100%
+    flex-wrap: wrap
+    margin-bottom: 37px
+    border-bottom: 1px solid #EDEDED
+    padding-bottom: 27px
+
+    .footer__nav-list
+        li  
+            a  
+                font-size: 13px
+                line-height: 19px
+                font-weight: 300
+                color: #8B8A8A
+                transition: all 150ms ease-in-out
+
+                &:hover
+                    text-decoration: none 
+                    color: color[0]
+
+.payment 
+    .footer__title 
+        margin-bottom: 5px
+
+.security
+    &__list
+        img 
+            max-width: 80px

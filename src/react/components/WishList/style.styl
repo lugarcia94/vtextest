@@ -1,0 +1,357 @@
+body.is-wishlist
+    height              : 100%
+    overflow            : hidden 
+
+.is-minicart #c-wishilist 
+    display: none !important
+
+.c-wishlist 
+    &__event-header
+        display         : none
+    &__checkbox 
+        position        : absolute 
+        opacity         : 0
+        &-span 
+            display         : block 
+            width           : 25px 
+            height          : 25px
+            border-radius   : 50% 
+            border          : solid 3px rgba(0, 0, 0, .1)
+            cursor          : pointer
+            svg 
+                display         : block 
+                margin-top      : -2px 
+                margin-left     : 2px   
+                opacity         : 0 
+        &:checked + .c-wishlist__checkbox-span 
+            svg 
+                opacity         : 1
+    &__qtd 
+        position        : absolute 
+        top             : -2px
+        right           : -2px
+        display         : flex 
+        justify-content : center 
+        align-items     : center 
+        width           : 20px
+        height          : 20px 
+        border-radius   : 50% 
+        background      : #fff
+        font-size       : 10px
+        font-weight     : regular
+    &__actions 
+        display         : flex 
+        align-items     : center 
+        .c-wishlist__button--remove 
+            margin      : 0 10px
+    &__button 
+        background          : #fff
+        border              : 0
+        &--all 
+            box-shadow      : 2px 2px 3px rgba(0,0,0, .3)
+            background      : color[0];
+            display         : inline-flex 
+            justify-content : center 
+            align-items     : center 
+            height          : 30px
+            padding         : 0 30px 
+            font-size       : 12px 
+            text-transform  : uppercase
+            background      : color[0]
+            transition      : all 300ms ease-in-out 
+            cursor: pointer
+            &:hover 
+                background  : color[0];
+                
+        &--heart 
+            position        : absolute 
+            top             : 0px 
+            left            : 0px
+            width           : 45px
+            height          : 45px 
+            border          : 0
+            background      : none 
+            border-radius   : 50% 
+            cursor          : pointer
+            transition      : all .2s ease-in-out
+            svg 
+                fill        : #fff
+                stroke      : #f00
+                stroke-width: 4px
+            &[aria-selected=true],&:hover
+                transform   : scale(1.3)
+                svg 
+                    fill    : #f00
+        &--bg 
+            position    : fixed
+            top         : 0 
+            left        : 0 
+            width       : 100% 
+            height      : 100% 
+            background  : rgba(0,0,0, .5)
+            opacity     : 0 
+            visibility  : hidden 
+            transition  : all .2s ease-in-out
+        &--open 
+            position        : relative
+            display         : flex 
+            justify-content : center 
+            align-items     : center  
+            width           : 50px
+            height          : 50px 
+            border          : 0
+            border-radius   : 50%
+            box-shadow      : 0 0 20px rgba(0, 0, 0, .15)
+            cursor          : pointer
+            svg 
+                fill                : #fff
+                stroke              : #f00
+                stroke-width        : 4px
+        &--close 
+            position        : absolute 
+            right           : 0 
+            top             : 0
+            padding         : 0 
+            padding         : 10px
+        &--buy 
+            box-shadow      : 2px 2px 3px rgba(0,0,0, .3)
+            display         : flex 
+            justify-content : center 
+            align-items     : center 
+            height          : 40px 
+            border          : 0 
+            padding         : 0 30px
+            font-size       : 14px 
+            font-weight     : semi-bold 
+            text-transform  : uppercase 
+            text-align      : center 
+            background      : #84dd4b
+            color           : #fff
+            cursor          : pointer
+            &:disabled, &[disabled]
+                background  : #eaeaea
+            transition      : all 300ms ease-in-out 
+            &:hover 
+                background      : #45b100
+
+        &--remove 
+            display         : flex 
+            justify-content : center 
+            align-items     : center 
+            width           : 40px 
+            height          : 40px 
+            border          : 0
+            background      : none 
+            cursor          : pointer
+            svg 
+                fill        : #f00
+    &__events
+        position        : fixed 
+        right           : 0 
+        bottom          : 120px
+        z-index         : 600
+        overflow        : hidden
+        &-item 
+            width           : 320px 
+            max-width       : 100%
+            margin          : 15px 0
+            background      : #fff
+            box-shadow      : 0 0 10px rgba(0,0,0,.1)
+            border-radius   : 3px  
+            margin-right    : 10px
+            animation       : event-show 1s 1
+            transition      : all .2s ease-in-out
+            &--creating 
+                border      : solid 1px #4CAF50 
+            &--removing 
+                border      : solid 1px #ff3366 
+            &[aria-hidden=true]
+                visibility  : hidden 
+                opacity     : 0  
+                animation   : event-remove 1s 1
+                max-height  : 0
+                overflow    : hidden
+        .c-product 
+            width       : 100%
+    &__header 
+        position        : fixed 
+        bottom          : 40px 
+        right           : 40px
+        z-index         : 500
+        opacity         : 0 
+        visibility      : hidden 
+        transition      : all .2s ease-in-out
+    &__main 
+        position        : fixed 
+        top             : 0 
+        left            : 0 
+        z-index         : 100
+        width           : 100% 
+        height          : 100% 
+        opacity         : 0 
+        visibility      : hidden 
+        transition      : all .2s ease-in-out
+    &__content
+        position        : fixed 
+        top             : 50% 
+        left            : 50%
+        z-index         : 100
+        width           : 90% 
+        height          : 90% 
+        border-radius   : 3px
+        background      : #fff
+        transform       : translate(-50%, -50%) scale(.5)
+        transition      : all .2s ease-in-out
+        box-shadow      : 0 0 20px rgba(0,0,0,.5)
+        &-item 
+            position    : relative 
+            padding     : 15px 30px 
+            + .c-wishlist__content-item 
+                border-top  : solid 1px rgba(0,0,0,.1)
+            &--adding 
+                &:before 
+                    content     : ''
+                    position    : absolute 
+                    top         : 0 
+                    left        : 0 
+                    width       : 100% 
+                    height      : 100% 
+                    background  : rgba(0,0,0,.5)
+            
+        &-empty 
+            font-size       : 24px 
+            padding         : 30px 
+            text-align      : center 
+            text-transform  : uppercase 
+        &-title 
+            font-size   : 24px
+            text-align  : center
+            font-weight : light
+        &-header        
+            height          : 100px 
+            padding         : 30px 
+            border-bottom   : solid 1px color[0]
+        &-list 
+            height      : calc(100% - 200px)
+            overflow    : auto
+            padding     : 15px 0
+        &-footer 
+            height      : 100px
+            padding     : 30px  
+            border-top  : solid 1px color[0]
+        &-label 
+            display             : flex
+            justify-content     : space-between
+            align-items         : center 
+            .c-product
+                flex            : 1 1 auto
+                &__name 
+                    font-size   : 14px
+                &__image 
+                    width       : 100px 
+                    height      : 100px
+    img 
+        max-width       : 100px 
+    &[aria-hidden=false]
+        .c-wishlist 
+            &__header 
+                opacity             : 1
+                visibility          : visible
+    &[aria-expanded=true]
+        .c-wishlist 
+            &__button 
+                &--bg 
+                    opacity         : 1
+                    visibility      : visible
+            &__main 
+                opacity             : 1
+                visibility          : visible
+            &__content
+                transform           : translate(-50%, -50%) scale(1)
+    &[data-loadding=true]
+        .c-wishlist 
+            &__header 
+                opacity             : 1
+                visibility          : visible
+            &__button 
+                &--open 
+                    animation: heart-mov 500ms infinite
+                    svg 
+                        fill        : #f00
+
+@keyframes heart-mov
+    0% 
+        transform: scale(1)
+    50% 
+        transform: scale(1.2)
+    100% 
+        transform: scale(1)
+
+@keyframes event-show 
+    0% 
+        transform: translate3d(100%, 0, 0)
+    100% 
+        transform: translate3d(0, 0, 0)
+@keyframes event-remove 
+    0% 
+        transform   : translate3d(0, 0, 0)
+        visibility  : visible
+        opacity     : 1
+        display     : block 
+        max-height  : 300px
+    100% 
+        transform   : translate3d(100%, 0, 0)
+        visibility  : hidden 
+        opacity     : 0  
+        margin-right: 0
+        max-height  : 300px
+
+.c-product
+    &__container 
+        display         : flex 
+        align-items     : center 
+        padding         : 15px
+    &__figure, &__content 
+        padding         : 15px
+    &__image 
+        width           : 50px 
+        height          : 50px
+    &__link 
+        text-decoration : none 
+        &:hover 
+            text-decoration : none
+    &__name 
+        font-size       : 12px
+        color           : #333
+
+@media(max-width: 768px)
+    .c-wishlist 
+        &__content 
+            width       : 100% 
+            height      : 100%
+
+@media (max-width: 568px)
+    .c-wishlist
+        &__events
+            &-item 
+                width           : 300px
+        &__button 
+            &--all 
+                width           : 100%
+        &__actions 
+            flex                : 0 0 100%
+            justify-content     : center 
+        &__content 
+            &-label 
+                flex-flow           : row wrap
+            &-item 
+                .c-product
+                    text-align      : center
+                    &__container
+                        flex-flow   : row wrap
+                    &__figure, &__content
+                        flex        : 0 0 100%
+                    img 
+                        width       : auto 
+                        height      : auto
+                        display     : inline-block

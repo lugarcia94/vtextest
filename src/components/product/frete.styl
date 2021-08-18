@@ -1,0 +1,167 @@
+.frete
+    .shipping-value
+        display         : none 
+
+#popupCalculoFreteWrapper
+    display                 : flex 
+    justify-content         : space-between
+    align-items             : center 
+    font-size               : 15px 
+    font-weight             : 400
+    line-height             : 20px 
+    height                  : 45px
+    border-top              : solid 1px rgba(0,0,0,.1)
+    padding                 : 12px 0
+
+    &:before 
+        content             : 'Calcule o Frete'
+
+    &:after 
+        font-icon           : url('./svg/next.svg')
+        font-size           : 18px
+        display             : flex 
+        justify-content     : center 
+        align-items         : center  
+        width               : 45px 
+        height              : 100%
+    a 
+        display             : none 
+
+#calculoFrete
+    margin-top              : 30px
+    z-index                 : 200
+    display                 : flex 
+    justify-content         : center 
+    align-items             : center   
+    width                   : 100% 
+    height                  : 100%  
+    background              : #fff  
+
+    .footer
+        display: none 
+
+  
+    .on &
+        visibility          : visible  
+        transform           : translate3d(0,0,0)
+        opacity             : 1
+    .quantity, .cep-busca, .header
+        display         : none 
+    .prefixo, .fitext
+        display         : flex
+        align-items     : center
+        font-size       : 13px
+        color           : color[1]
+        font-weight     : 600
+
+    .fitext
+        width           : 100%
+        height          : 35px 
+        padding         : 0 50px 0 20px 
+        border-radius   : 5px
+        background      : #FBFBFB
+        border          : 1px solid #EAEAEA  
+        font-size       : 14px
+        color           : color[0]
+        font-style      : italic   
+
+    .content
+        > fieldset 
+            position    : relative 
+
+    .frete-calcular
+        position        : absolute 
+        bottom          : 0 
+        right           : 0
+
+    .freight-btn
+        border          : 0 
+        width           : 50px
+        height          : 35px 
+        color           : color[0]
+        font-size       : 14px
+        font-weight     : semi-bold 
+        text-transform  : uppercase 
+        border-radius   : 3px
+        cursor          : pointer
+        background      : transparent 
+
+    .cep-invalido
+        position        : relative
+        border          : solid 1px #ff0000
+        border-radius   : 3px
+        padding         : 20px 
+        margin          : 15px 0
+        font-size       : 13px 
+        font-weight     : regular 
+        color           : #f00
+        &:before 
+            content         : ''
+            position        : absolute 
+            top             : -6px 
+            left            : 20px
+            width           : 10px 
+            height          : 10px 
+            border          : solid 1px #f00 
+            border-bottom   : 0 
+            border-right    : 0
+            border-radius   : 3px 0 0
+            transform       : rotate(45deg)
+            background      : #fff
+        strong 
+            font-weight : regular
+
+.freight-values
+    padding: 20px 0 
+    table 
+        border: solid 1px #eee
+        border-bottom-width: 0
+        font-size: 12px
+        color: #333
+
+        animation: animateFrete 300ms 1 ease
+
+        th, td 
+            border-bottom: solid 1px #eee 
+            padding: 5px 
+
+            &:empty 
+                display: none 
+
+            + td, + th 
+                border-left: solid 1px #eee
+        thead 
+            th, td 
+                background: #eee
+                font-weight: semi-bold
+                + td, + th 
+                    border-left-color: #fff
+
+@keyframes animateFrete 
+    from 
+        opacity: 0 
+        visibility: hidden 
+        transform: scaleY(0)
+    to 
+        opacity: 1 
+        visibility: visible 
+        transform: scaleY(1)
+
+#popupCalculoFreteWrapper
+    display             : none 
+
+@media(min-width: 992px)
+
+
+    #calculoFrete
+        display             : block 
+        height              : auto
+        position            : static
+        transform           : none 
+        opacity             : 1 
+        visibility          : visible 
+        padding             : 0
+        &:before
+            display         : none 
+        .content > fieldset
+            max-width       : 100%

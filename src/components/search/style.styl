@@ -1,0 +1,143 @@
+.header, .empty-search
+    
+
+    .search
+        background           : color[0]
+
+        select, legend, label
+            display          : none
+
+        &__container
+            border-radius: 3px
+            border: solid 1px #EAEAEA
+            background-color: #FBFBFB
+            height: 57px
+            border-radius   : 25px
+
+        fieldset
+            position        : relative
+            font-size       : 0
+
+
+            &:after
+                position           : absolute
+                right              : 0
+                top                : 0
+                z-index            : 0
+
+                display            : flex
+                justify-content    : center
+                align-items        : center
+                width              : 50px
+                height             : 55px
+                background-color   : transparent
+                font-icon          : url('./svg/search.svg')
+                font-size          : 22px
+                color              : color[0]
+                cursor             : pointer
+
+
+        [type=text]
+            display         : inline-block
+            vertical-align  : middle
+            width           : 100%
+            height          : 55px
+            border          : 0
+            background-color: #FBFBFB
+            border-radius   : 25px 
+            font-size       : 18px
+            font-weight     : regular
+            letter-spacing  : 0.2px
+            color           : color[0]
+            line-height     : 55px
+            padding-left    : 20px 
+            font-family: 'Montserrat', sans-serif
+
+
+        [type=button]
+            position        : relative
+            z-index         : 20
+            display         : inline-block
+            vertical-align  : middle
+            width           : 50px
+            height          : 55px
+            border          : 0
+            background      : rgba(0,0,0,0)
+            font-size       : 0
+            cursor          : pointer
+            position        : absolute
+            right           : 0 
+            top             : 0
+
+.ui-autocomplete
+    padding-top: 25px
+    z-index: 200 !important
+    width: 36%!important
+    max-height: 350px
+    overflow: auto
+    background: #ffffff
+    padding: 0
+    @media (max-width 991px)
+        width: calc(100vw - 40px)
+        max-width 1140px
+        left 50%!important
+        transform: translateX(-50%)
+        padding-top: 20px
+    @media (min-width 992px)
+        margin-top: 20px
+
+    // &:before
+    //     content: ''
+    //     background #fff
+    //     top 20px
+    //     left 0
+    //     right 0
+    //     bottom 0
+    //     position absolute
+    //     box-shadow: 0 0 5px rgba(0,0,0, .1)
+    //     border-radius: 2px
+
+    // &:after
+    //     content: ''
+    //     width 10px
+    //     height 10px
+    //     background #fff
+    //     border-radius: 2px
+    //     left: 50%;
+    //     margin-left: -10px;
+    //     transform: rotate(45deg)
+    //     position absolute
+    //     top 15px
+
+    //     box-shadow: -1px -1px 1px rgba(0,0,0, .1)
+
+
+    .ui-menu-item
+        border-bottom: 1px solid color[2]
+    li
+        position relative
+        z-index 2
+
+    img
+        margin-right 10px
+
+    a
+        display flex
+        align-items center
+        padding: 10px 20px
+        font-size 13px
+        font-weight 400
+        color: #333
+
+        &:hover
+            text-decoration: none
+
+
+    .ui-state-hover
+        background: color[0]
+        color #fff
+
+.scrolling--down, .scrolling
+    .ui-autocomplete
+        display: none!important
+

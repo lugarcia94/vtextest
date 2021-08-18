@@ -1,0 +1,376 @@
+.sidebar
+    &__container
+        position            : fixed
+        top                 : 0
+        left                : 0
+        z-index             : 100
+
+        width               : 100%
+        height              : 100%
+
+        background          : rgba(0,0,0,.5)
+        transition          : transition[0]
+
+        opacity             : 0
+        visibility          : hidden
+
+        .sidebar--open &
+            opacity         : 1
+            visibility      : visible
+
+    &__header, &__main
+        width               : 320px
+        max-width           : 90vw
+
+        background          : #fff
+
+        transition          : transition[0]
+        transform           : translate3d(-100%, 0, 0)
+
+        .sidebar--open &
+            transform       : translate3d(0, 0, 0)
+
+
+    &__header
+        display             : flex
+        height              : 40px
+        justify-content     : space-between
+        align-items         : center
+
+        font-size           : 14px
+        font-weight         : bold
+
+        text-transform      : uppercase
+
+        background          : #fff
+        color               : #fff
+
+        padding-left        : 15px 
+
+        .sideebar__title
+            display: none
+
+
+    &__main
+        height              : 100%
+        overflow             : auto
+        
+
+
+    &__button
+
+        svg
+            width           : 20px
+            height          : 20px
+
+            fill            : #fff
+
+        &--close
+
+            width           : 50px
+            height          : 50px
+
+            border          : 0
+
+            background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB0AAAAdCAMAAABhTZc9AAABBVBMVEUAAAD/////8v//8/P48fj48fj07PT07fP07fPz7fPz7fP07PPz7fL07PP07fP07fP07fPBbcXBbsXCbsXCbsbCd8vCeMvGccPGccTGe8rIfcvKdMHLdMHLdMLPd7/Qd7/Qd8DQeMDUer3Ver7Ve77Yq9zZfbvZrt3afrzbsN3btN/cs93ctuDdstzegLnegbrfgbrftNzgs9vguN/htdvhttzhu+DiuN3jg7fjhLjjt9rkutzluNnmt9jmu9voh7boutnpudfpu9jrutbsirTsvdfsv9ntirTti7TtlLrul7zuvtbuwNjuwtnwwNXwwtfxmbrymrryv9PywNXyxdjyx9nz7PKGgIykAAAAEXRSTlMABhMVJCVej6mqw8zd5vn6/GN45GEAAAEXSURBVHjafZN5V4MwDMADm0BhwDyZypzXdJ54C16dunlt3prv/1F8CCV9E/v7p0nz0iRNAgW6YTmu5zqWocMoVVZHQZ1VQUYzfZTxTY2MFRtHsSuFsYZ/qeVmjTxl7OxxE8sxf7P1sRw/zZzlSnv2MBOGjx+ZwAB0UefMeHCcnrf84S2vWwcDc7Yng/AM8Trh99+YYYCFgq1GuHhxGcX8VdxY4GDBfnNhpRMlQxQ44CJxtLTc2b0j3QUPiYPW6lrUJ92TfXfmU2syIF8p7kaj2brq7sX8pYhLOW9OBOE54k3Me18iZ6p3eio4Tc8+772Leumv1udOMuH56bP4K2D4H0zdI2V/1bOhniv1TKrnmRgr3QX1Hv0A1fG9SC1o+YgAAAAASUVORK5CYII=')
+            font-size: 0
+            background-repeat: no-repeat
+            background-color: #fff
+            background-position: center
+            right 0
+            position: absolute
+
+
+        &--open
+            position            : fixed
+            bottom              : 20px
+            left                : 20px
+            z-index             : 50
+
+            width               : 45px
+            height              : 45px
+
+            border              : 0
+            border-radius       : 50%
+
+            background-image    : linear-gradient(90deg, color[0] 0%, color[0] 100%)
+    img 
+        + span 
+            display             : none 
+    label
+        &.thumb 
+            position                : relative 
+            font-size               : 0
+            width                   : 30px
+            margin                  : 1px
+            .image 
+                display             : inline-block
+                border-radius       : 3px
+            input 
+                position            : absolute
+                opacity             : 0
+                &:checked 
+                    + .image 
+                        padding     : 4px
+                        box-shadow  : 0 0 0 1px #FF7000, inset 0 0 0 4px #fff
+        &.not-thumb
+            position                : relative 
+            flex                    : 1 1 auto
+            input 
+                position            : absolute
+                opacity             : 0
+                + span 
+                    display                 : flex 
+                    justify-content         : center 
+                    align-items             : center   
+                    height                  : 100% 
+                    padding                 : 0 5px
+                    border-radius           : 3px 
+                    &:before 
+                        display             : none 
+                &:checked 
+                    + span 
+                        box-shadow  : 0 0 0 1px color[0]
+
+    .fields-thumbs
+        display                     : flex 
+        justify-content             : flex-start 
+        align-items                 : stretch  
+        flex-wrap                   : wrap
+        margin                      : -4px -2px
+        label 
+            margin                  : 4px
+    .ver-filtros 
+        position relative
+        font-size: 0
+        width 100%
+        display: block
+
+        &:before
+            position absolute
+            content: 'X'
+            color: color[0]
+            right 0
+            font-size: 16px
+            font-weight: 700
+            bottom: 0
+            background: #e6e6e6
+            width 20px
+            height 20px
+            border-radius: 50%
+            display: flex
+            align-items: center
+            justify-content: center
+        
+
+.menu-navegue
+    padding                     :  0 
+    display                     : flex
+
+    a
+        flex                    : 1 1 auto
+        display                 : flex
+        justify-content         : center
+        align-items             : center
+        height                  : 33px
+        border-radius           : 7px
+        margin                  : 2px
+        font-size               : 13px
+        font-weight             : semi-bold 
+        text-transform          : uppercase
+        text-decoration         : none
+        background              : #fff
+        color                   : color[1]
+        border                  : 1px solid color[0] 
+
+        &[title="Refinar Resultado"]
+            font-size           : 0
+
+            &:before
+                content         : 'Filtrar'
+                font-size       : 14px
+
+        &.tab-refinar-ativo, &.tab-navegue-ativo
+            background-image    : linear-gradient(270deg, color[0] 0%, color[0] 100%)
+            color               : #fff
+            border              : none     
+
+
+.search-single-navigator
+    padding                     : 15px
+
+    li, h4
+        margin-bottom           : 5px 
+
+    a
+        font-size               : 14px
+        font-weight             : regular
+        color                   : #8B8A8A
+
+        &:hover
+            color               : color[0] 
+            cursor              : pointer
+            text-decoration     : none 
+
+    h3 
+        margin-bottom           : 15px
+
+        a
+            font-size               : 21px
+            font-weight             : regular
+            text-transform          : lowercase
+            color                   : #453F3F
+
+            &:hover
+                text-decoration     : none 
+
+    h5:not(first-child)
+        font-size               : 21px
+        font-weight             : regular
+        text-transform          : lowercase
+        color                   : #453F3F
+        margin-bottom           : 15px
+        margin-top              : 50px
+
+    .thumb
+        width                   : 30px
+        a 
+            display             : block
+        &.filtro-ativo span 
+            display             : none 
+
+    .fields-thumbs
+        li 
+            margin              : 4px
+        .ver-filtros
+            margin              : 4px
+
+.search-multiple-navigator
+    padding                     : 15px
+    display                     : flex 
+    flex-flow                   : column nowrap
+    &[style*=block] 
+        display                 : flex !important
+    > h3, > h4, fieldset 
+        order                   : 1 
+
+        a
+            font-size           : 21px
+            font-weight         : 400
+            text-transform      : lowercase
+            color               : #453f3f
+
+            &:hover
+                color               : color[0] 
+    .bt-refinar
+        order                   : 2
+
+    h3
+        display                 : none
+
+    h4 a
+        font-size               : 13px
+        font-weight             : regular
+
+        color                   : #888888
+
+    label
+        font-size: 14px
+        font-weight: 400
+        color: #8b8a8a
+        display: block
+        margin: 2px 0
+
+        &:hover
+            color: color[0]
+
+        &:not(.not-thumb)
+            input 
+                position            : absolute
+                opacity             : 0 
+                + span:not(.image)
+                    display             : flex 
+                    justify-content     : flex-start 
+                    align-items         : center  
+                    margin-bottom       : 10px
+                    &:before 
+                        content         : ''
+                        display         : block
+                        width           : 15px 
+                        height          : 15px 
+                        border-radius   : 3px
+                        border          : none
+                        margin-right    : 7px 
+                        background      : #e6e6e6 
+                &:checked
+                    + span:not(.image):before 
+                        background  : color[0]
+
+    h5:not(first-child)
+        margin-top          : 15px
+        font-size           : 21px
+        font-weight         : 400
+        text-transform      : lowercase
+        color               : #453f3f
+        margin-bottom       : 15px
+    .fields-thumbs
+        .ver-filtros
+            margin              : 4px
+    
+
+.search-filter-button
+    display                     : flex
+    justify-content             : center
+    align-items                 : center
+
+    height                      : 40px
+    margin-top                  : 15px
+    border-radius               : 7px
+
+    font-size                   : 0
+    font-weight                 : bold
+
+    text-transform              : uppercase
+
+    background-image: linear-gradient(270deg, color[0] 0%, color[0] 100%)
+    color                       : #fff
+
+    &:before
+        content                 : 'Aplicar Filtro'
+        font-size               : 15px
+        font-weight             : semi-bold 
+
+    &:hover
+        text-decoration         : none
+
+@media (min-width: 992px)
+    .sidebar__main 
+        overflow                    : visible
+    .sidebar__button--open
+        display                     : none
+
+    .menu-navegue
+        padding                     : 0
+        margin                      : -2px
+
+    .search-single-navigator, .search-multiple-navigator
+        padding-left                : 0
+        padding-right               : 0
+
+    .sidebar
+        &__container
+            position                : static
+
+            background              : none
+
+            visibility              : visible
+            opacity                 : 1
+
+        &__header
+            display                 : none
+            overflow                : hidden
+
+        &__header, &__main
+            width                   : auto
+            max-width               : none 
+            transform               : translate3d(0,0,0)

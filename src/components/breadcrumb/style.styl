@@ -1,0 +1,62 @@
+.breadcrumb
+    { container }
+    display: flex
+    align-items: center
+    justify-content: space-between
+    margin-top 5px
+    margin-bottom 20px
+
+    a 
+        font-size               : 12px 
+        font-weight             : 400
+        color                   : #453F3F
+    ul 
+        display                 : flex 
+        justify-content         : flex-start 
+        align-items             : center 
+        margin                  : 10px -2px 
+    li 
+        padding                 : 2px 
+
+        &:first-child
+            &:before
+                content: 'Você está em:'
+                font-size: 12px
+                color: #8B8A8A
+                font-weight: 400
+                margin-right: 5px
+
+        &:not(:last-child):after 
+            content             : '/'
+            font-size           : 10px 
+            color               : #453F3F
+            display             : inline-block 
+            margin              : 0 0 0 5px
+        &:first-child 
+            a 
+                font-size       : 12px
+        &.last 
+            a 
+                color           : color[0]
+
+.share__social 
+    margin-top: 15px
+    display: flex
+    align-items: center
+    
+    @media(max-width 991px)
+        display: none
+
+    &:before
+        content: 'compartilhe:'
+        font-size: 12px
+        color: #453F3F
+        margin-right: 5px
+
+
+@media (max-width: 991px)
+    .breadcrumb ul
+        display: block 
+
+        > li 
+            display: inline

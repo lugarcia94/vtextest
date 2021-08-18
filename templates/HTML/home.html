@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common" xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce">
+<head>
+    <vtex:template id="00-likecosmeticos-head" />
+    
+</head>
+<body>
+<div class="wrapper">
+    <vtex:template id="00-likecosmeticos-menu" />
+
+    <div class="wrapper__container">
+        <vtex:template id="00-likecosmeticos-header-home" />
+
+        <main class="main" id="main">
+
+            <section class="banner banner--full">
+                <div data-carousel="one" class="banner__container">
+                    <vtex:contentPlaceHolder id="bannerHomeFull" />
+                </div>
+            </section>
+            
+            <vtex.cmc:rulerList/>
+            
+            <div class="offer-day">
+                <div class="offer-day__container">
+                    <vtex:contentPlaceHolder id="oferta do dia" />
+                </div>
+            </div>
+            
+            <section class="minibanner mini__carousel">
+                <div class="minibanner__container">
+                    <vtex:contentPlaceHolder id="miniBanner" />
+                </div>
+            </section>
+            
+            <vtex.cmc:brandsList/>
+
+            <div class="showcase">
+                <div data-carousel="showcase" class="showcase__container">
+                    <vtex:contentPlaceHolder id="os mais curtidos" />
+                </div>
+            </div>
+            
+            <section class="minibanner-mid">
+                <div class="minibanner-mid__container">
+                    <vtex:contentPlaceHolder id="minibannermid" />
+                </div>
+            </section>
+            
+            <section class="showcase-tabs">
+                <div class="showcase-tabs__container">
+                    <h1 class="showcase-tabs__title">qual seu tipo de cabelo?</h1>
+                    <ul class="showcase-tabs__tabs">
+                        <li class="showcase-tabs__tabs-item showcase-tabs__tabs-item--active" data-showcase="showcase--ondulado">ondulado</li>
+                        <li class="showcase-tabs__tabs-item" data-showcase="showcase--liso">liso</li>
+                        <li class="showcase-tabs__tabs-item" data-showcase="showcase--tingido">tingido</li>
+                        <li class="showcase-tabs__tabs-item" data-showcase="showcase--moreno">moreno</li>
+                        <li class="showcase-tabs__tabs-item" data-showcase="showcase--loiro">loiro</li>
+                    </ul>
+                    <div class="showcase-tabs__showcase">
+                        <div class="showcase showcase--ondulado showcase--active">
+                            <div class="showcase__container">
+                                <vtex:contentPlaceHolder id="ondulado" />
+                            </div>
+                        </div>
+                        
+                        <div class="showcase showcase--liso">
+                            <div class="showcase__container">
+                                <vtex:contentPlaceHolder id="liso" />
+                            </div>
+                        </div>
+                        
+                        <div class="showcase showcase--tingido">
+                            <div class="showcase__container">
+                                <vtex:contentPlaceHolder id="tingido" />
+                            </div>
+                        </div>
+                        
+                        <div class="showcase showcase--moreno">
+                            <div class="showcase__container">
+                                <vtex:contentPlaceHolder id="moreno" />
+                            </div>
+                        </div>
+                        
+                        <div class="showcase showcase--loiro">
+                            <div class="showcase__container">
+                                <vtex:contentPlaceHolder id="loiro" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="minibanner-down">
+                <div class="minibanner-down__container">
+                    <vtex:contentPlaceHolder id="minibannerdown" />
+                </div>
+            </section>
+            
+            <div class="showcase">
+                <div data-carousel="showcase" class="showcase__container">
+                    <vtex:contentPlaceHolder id="separados para voce" />
+                </div>
+            </div>
+            
+            <div class="news-rulers">
+                <div class="news-rulers__item news">
+                    <vtex.cmc:newsletterOptIn/>
+                </div>
+            </div>
+        </main>
+
+        <vtex:template id="00-likecosmeticos-footer" />
+        <vtex:template id="00-likecosmeticos-scripts" />
+        <vtex.cmc:productQuickView/>
+    </div>
+</div>
+</body>
+</html>

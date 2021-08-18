@@ -1,0 +1,199 @@
+[data-component=kits]
+    display                         : none
+
+    &.kits--actived
+        display                     : block
+
+.kits
+    .slick-slide
+        max-width                   : 100%
+        overflow                    : hidden
+
+.showcase
+    &--kit
+        display                     : flex
+
+        text-align                  : left
+
+        .showcase__item
+            padding                 : 5px 15px
+
+        @media (max-width: 991px)
+            flex-wrap               : wrap
+
+            .showcase__kit
+                flex                : 1 1 auto
+                max-width           : 100%
+
+            .showcase__items
+                flex                : 0 0 100%
+                display             : flex
+                flex-flow           : row wrap
+                max-width           : 100%
+
+                .showcase__item
+                    flex            : 1 1 250px
+
+
+        @media(max-width: 568px)
+            .showcase__items
+                .showcase__main
+                    display     : block
+
+                .showcase__item
+                    max-width   : 100%
+
+    &__kit
+        flex                        : 0 1 490px
+
+    &__items
+        flex                        : 1 1 auto
+        max-width                   : 380px
+
+    &__button
+        &--buy
+            display                 : inline-block
+            padding                 : 5px 15px
+
+            font-size               : 16px
+            font-weight             : bold
+
+            text-transform          : uppercase
+
+            background              : #84DD4B
+            color                   : #fff
+
+            &:hover
+                text-decoration     : none
+                background          : darken(#84DD4B, 20%)
+
+
+    &__item
+        &--row
+            display                 : flex
+
+            .gift > &
+                align-items         : center
+                padding             : 0
+                margin              : 20px 0
+
+                .showcase__main
+                    display         : block
+                    text-align      : left
+
+
+            .showcase__image
+                flex                : 0 0 90px
+                padding-right       : 15px
+                min-width           : 75px
+
+
+                img
+                    width           : 60px
+                    height          : 60px
+
+            .showcase__main
+                flex                    : 1 1 auto
+                display                 : flex
+                flex-flow               : row wrap
+                max-width               : calc(100% - 90px)
+
+            .showcase__name
+                flex                    : 0 0 100%
+                display                 : block
+                height                  : auto
+                white-space             : nowrap
+
+                font-size               : 13px
+                text-overflow           : ellipsis
+                margin-bottom           : 0
+
+                text-align              : left
+
+            .showcase__prices
+                flex                    : 1 1 auto
+                display                 : flex
+                text-align              : left
+
+                .valor-de, .valor-por
+                    flex                : 0 0 50%
+
+            .showcase__actions
+                text-align              : left
+
+            .showcase__description
+                text-align              : left
+
+            .showcase__button--buy
+                display                 : flex
+                align-items             : center
+                justify-content         : center
+                padding                 : 0 10px
+                height                  : 23px
+
+        &--kit
+            display                     : flex
+            max-width                   : 100%
+
+            .showcase__image, .showcase__main
+                flex                    : 0 0 50%
+                max-width               : 50%
+
+            .showcase__main
+                text-align              : left
+
+            .showcase__button--buy
+                display                 : flex
+                align-items             : center
+                justify-content         : center
+                padding                 : 0 10px
+                height                  : 35px
+
+            .showcase__link--name
+                font-size               : 18px
+                font-weight             : semi-bold
+
+            .showcase__review
+                justify-content         : flex-start
+
+
+            @media (max-width: 568px)
+                flex-wrap               : wrap
+
+
+                > .showcase__image, > .showcase__main
+                    flex                : 0 0 100%
+                    max-width           : 100%
+
+
+.showcase__gift-title
+    display         : block
+    font-size       : 13px
+    font-weight     : regular
+    line-height     : 1.2
+
+    height          : auto
+
+    color           : color[0]
+
+
+
+[data-component=kits]
+    .slick
+        &-arrow
+            left            : 50%
+            position        : absolute
+            bottom          : 0
+
+            transform       : translateX(-50%)
+
+        &-prev
+            margin-left    : -70px
+
+        &-next
+            margin-left     : 70px
+
+        &-dots
+            padding         : 15px 0
+            margin          : 0 auto
+            max-width       : 120px

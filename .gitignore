@@ -1,0 +1,10 @@
+node_modules/
+temp
+*.log
+.idea
+build
+deploy
+.DS_Store
+npm-debug.log*
+*.sketch
+*.psd

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common" xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce">
+
+<head>
+    <vtex:template id="00-likecosmeticos-head" />
+</head>
+<body id="institutional-page">
+<div class="wrapper">
+    <vtex:template id="00-likecosmeticos-menu" />
+
+    <div class="wrapper__container">
+        <vtex:template id="00-likecosmeticos-header" />
+
+        <main class="main" id="main">
+
+            <div class="main__container layout__col1" id="main__container">
+                <div class="layout__main">
+                    <section class="contact-us">
+                        <div class="contact-us__container">
+                            <div class="contact-us__header">
+                                <h1>Fale Conosco</h1>
+                            </div>
+                            <div class="contact-us__content">
+                                <vtex:contentPlaceHolder id="contentText"/>
+                            </div>
+                            <div class="contact-us__form"><div data-component="contact"></div></div>
+                        </div>
+                    </section>
+                </div>
+
+            </div>
+        </main>
+
+    </div>
+
+    <vtex:template id="00-likecosmeticos-footer" />
+    
+    <script src="/arquivos/jquery.mask.min.js"></script>
+    
+    <vtex:template id="00-likecosmeticos-scripts" />
+    
+    <script defer="">
+        $('.contact-us__item #phone').mask('(00) 0000-0000');
+        $('.contact-us__item #celular').mask('(00) 00000-0000');
+    </script>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,450 @@
+@media(max-width : 991px)
+    .minicart
+        position              : fixed
+        top                   : 0
+        right                 : 0
+        z-index               : 200
+
+        width                 : 100%
+        height                : 100%
+
+        background            : rgba(0,0,0,.5)
+
+        transition            : transition[0]
+
+        opacity               : 0
+        visibility            : hidden
+
+        .is-minicart &
+            opacity           : 1
+            visibility        : visible
+
+        &__container
+            position          : fixed
+            top               : 0
+            right             : 0
+
+            width             : 290px
+            height            : 100vh
+
+            max-height        : 100%
+
+            background        : #fff
+
+            transform         : translate3d(256px, 0, 0)
+            transition        : transition[0]
+
+            .is-minicart &
+                transform       : translate3d(0, 0, 0)
+
+            &:before
+                content         : ''
+                position        : fixed
+                top             : 0
+                left            : 0
+                z-index         : 100
+
+                width           : 100%
+                height          : 100%
+
+                background      : rgba(0,0,0,.5)
+
+                opacity         : 0
+                visibility      : hidden
+
+            &:after
+                content         : ''
+                position        : fixed
+                top             : 50%
+                left            : 50%
+                z-index         : 200
+
+                width           : 40px
+                height          : 40px
+
+                border-radius   : 50%
+
+                border          : solid 4px color[0]
+                border-top      : solid 4px transparent
+
+                animation       : rotating 1s linear infinite
+
+                opacity         : 0
+                visibility      : hidden
+
+        &__header
+            display           : flex
+            justify-content   : space-between
+            align-items       : center
+
+            height            : 40px
+            padding-left      : 15px
+
+            font-size         : 14px
+            font-weight       : 500
+
+            text-transform    : uppercase
+
+            background-image  : linear-gradient(-270deg, color[0] 0%, color[0] 100%)
+            color             : #fff
+
+        &__main
+            height            : calc(100% - 240px)
+            overflow-y        : auto
+
+        &__empty
+            display           : block
+            padding           : 15px
+
+            font-size         : 14px
+            font-weight       : regular
+
+            text-transform    : uppercase
+            text-align        : center
+
+        &__close
+            font-size           : 0
+            display             : flex
+            justify-content     : center
+            align-items         : center
+            border              : 0
+            width               : 40px
+            height              : 40px
+            background          : none 
+            &:before
+                font-icon       : url('./svg/close.svg')
+                font-size       : 18px
+                color           : #fff
+
+        &__item
+            position            : relative
+            border-bottom       : solid 1px rgba(0,0,0,.1)
+
+        &__trash
+            position            : absolute
+            top                 : 0
+            left                : 0
+            border              : 0
+            font-size           : 0
+            background          : none
+            cursor              : pointer
+            background-repeat   : no-repeat
+            background-position : center
+            background-size     : auto
+            width               : 23px
+            height              : 23px
+
+        &__link
+            display             : flex
+            padding             : 10px
+
+            font-size           : 13px
+            font-weight         : regular
+
+            color               : color[1]
+
+            &:hover
+                text-decoration : none
+
+        &__info
+            display             : flex
+            flex-flow           : row wrap
+            justify-content     : space-between
+
+        &__name
+            margin-bottom       : 10px
+            flex                : 0 0 100%
+            font-size           : 12px
+            line-height         : 14px
+            color               : color[1]
+
+        &__amount
+            font-size: 11px
+            color: #8B8A8A
+            line-height: 14px
+
+        &__price
+            font-size: 15px
+            color: color[2]
+            font-weight: bold
+            line-height: 18px
+
+        &__figure
+            flex                : 0 0 55px
+            margin-right        : 10px
+
+
+        &__price-total
+            display             : flex
+            justify-content     : flex-end
+            align-items         : center
+            width               : 100%
+            height              : 40px
+
+            padding             : 0 10px
+
+            font-size           : 14px
+            text-transform      : uppercase
+
+            .minicart__price
+                font-size       : 17px
+                font-weight     : bold
+
+                padding-left    : 10px
+
+                color           : color[2]
+
+
+        &__footer  
+            position: relative 
+            &:before 
+                content: ''
+                position: absolute 
+                top: 0;
+                left: 0; 
+                width: 100%;
+                height: 1px;
+                background: linear-gradient(to right, color[0], color[0]);
+
+            a
+                display         : flex
+                justify-content : center
+                align-items     : center
+
+                width           : 100%
+                height          : 40px
+
+                border          : 0
+
+                font-size       : 16px
+                font-weight     : bold
+
+                text-transform  : uppercase
+
+                background      : #00954c
+                color           : #fff
+
+
+        &__fretegratis
+            margin-bottom 15px
+            padding: 0 15px
+
+            span  
+                font-size: 12px
+                color: #000
+                display: block
+                width: 100%
+
+                strong 
+                    font-weight: 600
+
+            .progressbar
+                background: #edecec
+                height 3px 
+                width 100%
+                margin-top 15px
+                display: block
+
+                > div 
+                    background: #DEB94C
+                    height 5px
+                    position relative
+
+                    &:after
+                        content: ''
+                        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAVCAMAAABvwg4pAAAA9lBMVEXrukD////rukDrukDrukDrukDrukDrukDrukDrukDrukDrukDrukDrukDrukDrukDrukDrukDrukDrukDrukDrukDrukDrukDrukDrukDrukDrukDrukDrukDrukDrukDrukDrukDrukDrukDrukDrukDrukDrukDrukDrukDrukDrukDrukDrukDrukDrukDrukDrukDrukDrukDrukDrukDrukDrukDrukDrukDrukDrukDrukDrukDrukDrukDrukDrukDrukDrukDrukDrukDrukDrukDrukDrukDrukDrukDrukDrukDrukDrukDrukDrukCCfXvGAAAAUXRSTlMAAAECBAUJCg0ODxUdIyQmJywtLjA1P0pTVFVWV1haXF5jZmpxcnV6fX+Gh4mWoqWpsbW7v8HCw8zR09XW2tzf4eLl6uvs8PHy9Pb3+Pn7/P7pqSoEAAAAv0lEQVR4AbXPx3aCQBjF8TshkF5IQjrpIb2H9GJRLCDMff+XcRBZ6GFceI6/7X/x3Q+P4aDykuhDyCHuWOl8dcXUJCU4KE7fr++JPNbd2o/liW7GbiyPdAu3ZbUg3Z+lAs6opDEiWZNJH3tei7nO5Y5P5QL/ZLwAeMzdCDHbIFnB3Hq7OQW4fLBTdzxVH5ekszYPwOf19OInD5Ha4t+y4fFLdQAbESPJNwM9T2TEZDNLsJ9rv7cWMubVT/3FEUoXtWN8uEIDsFsAAAAASUVORK5CYII=')
+                        background-repeat: no-repeat
+                        background-position: center
+                        display: block
+                        height: 30px
+                        z-index: 999
+                        position: absolute
+                        width: 30px
+                        right: -27px
+                        top: -12px
+
+
+    @media (min-width: 992px)
+        .minicart
+            &__trash
+                transform           : translateX(-100%) translateY(-50%)
+                transition          : transition[0]
+
+            &__item:hover
+                .minicart__trash
+                    transform      : translateX(0) translateY(-50%)
+
+@media(min-width 992px)
+    .minicart
+        position relative
+        &__container
+            position: absolute
+            top: 10px
+            right: 0
+            width: 540px
+            background: #fff
+            border-radius: 7px
+            box-shadow: 0 0 5px 0 rgba(0,0,0,0.20)
+            padding: 25px
+            opacity 0
+            visibility: hidden
+            transition: all .3s
+            .slick-slider
+                transition: all .3s
+            &.is-loading
+                .minicart__main
+                    &:before 
+                        content: 'carregando ... '
+                        display: block
+                        font-size: 16px
+                        opacity: 1
+                        visibility: visible
+                        text-align: center
+                    .slick-slider
+                        opacity 0!important
+            &:before
+                content: ''
+                display: block
+                position: absolute
+                width: 26px
+                height: 26px
+                background: #fff
+                top: -10px
+                right: 15px
+                transform: translateX(-50%) rotate(45deg)
+                box-shadow: 0 0 5px 0 rgba(0,0,0,0.2)
+                border-radius: 7px
+            &:after
+                content: ''
+                display: block
+                position: absolute
+                width: 90%
+                height: 26px
+                background-color: #fff
+                top: 0px
+                right 5px
+        &__header
+            display none
+        &__main
+            padding: 0 20px
+            transition: all .3s
+        .slick-prev
+            top: 30%
+            left -15px
+            z-index 1
+            padding: 0
+            background: none
+            &:before
+                width: 32px
+                height: 32px
+                background-size: contain
+                margin: 0 auto
+        .slick-next
+            top: 30%
+            right: -15px
+            z-index: 1
+            padding: 0
+            background: none
+            &:before
+                width: 32px
+                height: 32px
+                background-size: contain
+                margin: 0 auto
+        &__link
+            &:hover
+                text-decoration: none
+        &__name
+            font-size: 12px
+            line-height: 14px
+            color: color[1]
+            height 42px
+            overflow hidden
+            margin-bottom: 5px
+        &__amount
+            font-size: 11px
+            color: #8B8A8A
+            line-height: 14px
+            display: block
+            padding-bottom: 5px
+        &__price
+            font-size: 15px
+            font-weight: bold
+            line-height: 18px
+            color: color[2]
+        &__item
+            max-width 115px
+            margin: 0 auto
+            display: block!important
+            position relative
+        &__trash
+            border: none
+            width: 23px
+            height 23px
+            position: absolute
+            top: 0
+            right 0
+            background: none
+            background-repeat: no-repeat
+            background-position: center
+            background-size: auto
+            cursor: pointer
+            background: #000
+            border-radius: 50%
+            color: #fff
+            font-weight: 700
+            
+        &__footer
+            text-align: center
+            padding-top: 40px
+            display: flex
+            align-items: center
+            justify-content: space-between
+            flex-wrap: wrap
+            margin-left: auto
+
+        &__price-total
+            display: block
+            text-align: center 
+            .minicart__price
+                font-size: 17px
+                padding-left: 3px
+        &__total
+            font-size: 13px
+            line-height: 18px
+            color: color[1]
+        &-calltoaction
+            background: #00954c
+            color: #ffffff
+            padding: 9px 0
+            display: flex
+            align-items: center
+            justify-content: center
+            border-radius: 5px
+            max-width: 100%
+            width: 170px
+            margin-top: 14px
+            font-size: 14px
+            font-weight: 500
+            text-transform: uppercase
+            letter-spacing: 1.48px
+            transition: all .3s
+            border: 1px solid transparent
+            &:hover
+                text-decoration: none
+                background: #ffffff
+                color: #00954c
+                border-color: #00954c
+.header__cart
+    #valorFreteGratis
+        display: none
+    &:hover
+        .minicart__container
+            opacity 1
+            visibility: visible
+
+
+@keyframes fadeOpen
+  from 
+    opacity : 0
+  to 
+    opacity : 1

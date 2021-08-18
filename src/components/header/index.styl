@@ -1,0 +1,124 @@
+.header
+    .wrapper__container > &
+        position            : fixed
+        top                 : 0
+        left                : 0
+        z-index             : 100
+        width               : 100%
+        transition          : transition[0]
+
+    &__head-nav
+        display         : none
+    &__wrapper
+        background      : #00954C
+        .scrolling:not(.scrolling--top) &
+            box-shadow: 0 0 10px 0 rgba(0,0,0,0.15)
+            
+    &__container
+        { container }
+        background      : #00954C 
+        z-index         : 100 
+        display         : flex
+        justify-content : space-between
+        align-items     : center
+        height          : 95px
+
+        &--menu
+            padding     : 0
+            .scrolling:not(.scrolling--top) &
+                opacity     : 1
+                visibility  : visible
+ 
+
+    .scrolling &
+        min-height          : 66px
+        background          : #fff
+
+    &__logo, &__button-menu, &__cart, &__head-nav
+        position        : relative
+        z-index         : 30
+
+    &__button-menu
+        z-index         : 1
+
+    &__logo
+        flex            : 1 1 auto
+        
+        display         : flex
+        justify-content : center
+        align-items     : center
+
+        max-width       : 430px
+
+ 
+    &__search
+        position        : absolute
+        top             : 100%
+        left            : 0
+        z-index         : 10
+
+        width           : 100%
+
+        transition      : transition[0]
+
+        @media(max-width : 991px)
+            padding: 0 15px 10px
+            background: color[0]
+
+        .scrolling:not(.scrolling--top) &
+            transform   : translate3d(0, -100%, 0)
+            opacity     : 0
+            visibility  : hidden
+
+@media (min-width: 992px)
+    .scrolling
+        .header__container:after
+            bottom: 0
+
+    .scrolling--top
+        .menu
+            top: 95px    
+
+    .header
+
+        &__search
+            position: relative
+            top     : auto
+            left    : auto
+
+            z-index     : 30 
+            flex        : 1 1 auto
+            max-width   : 330px
+
+
+            .scrolling:not(.scrolling--top) &
+                transform   : none
+                opacity     : 1
+                visibility  : visible
+
+        &__logo
+            justify-content : flex-start
+            flex: 0 0 430px
+        &__head-nav
+                display: flex
+                justify-content: space-between
+                max-width: none 
+                flex: 0 0 auto 
+                min-width: 330px
+
+        &__menu
+            position    : absolute
+            top         : 100%
+            left        : 0
+
+            width       : 100%
+
+            transition  : transition[0]
+
+            .scrolling:not(.scrolling--top) &
+                transform   : translate3d(0, -100%, 0)
+                opacity     : 0
+                visibility  : hidden
+
+        &__button-menu
+            display         : none
